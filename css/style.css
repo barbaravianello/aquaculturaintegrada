@@ -358,7 +358,7 @@
   display: inline-block;
   zoom: 1;
   *display: inline;
-  color: #52d3aa;
+  color: #0090ca;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -985,10 +985,17 @@ form label {
 
 #equipe_titulo {
   margin-bottom: 5%;
+  margin-top: 5%;
+  padding-bottom: 1%;
 }
 
 #equipe_fotos {
   margin-bottom: 15%;
+}
+
+#eject {
+  color: #c3bec2;
+  font-weight: bold;
 }
 
 
@@ -1020,7 +1027,6 @@ a {
   transition: 0.5s;
 }
 a:hover {
-  text-decoration: underline !important;
   color: #4B63AB !important;
 }
 a:focus, a:active {
@@ -1716,13 +1722,13 @@ input[type="text"] {
 }
 .main-footer .social a{
     color:#c3bec2;
-    font-size:15px;
+    font-size:170%;
 }
 .main-footer .social a:hover{
     color:#ff2b4a;
 }
 .main-footer .social a i{
-    border-right:1px solid #c3bec2;
+    border-right:0px solid #c3bec2;
     padding:0 10px 0 10px;
 }
 .main-footer .social a i.dribbble{
@@ -1798,7 +1804,7 @@ input[type="text"] {
   display: inline-block;
   position: relative;
   width: 100%;
-  text-align: right;
+  text-align: center;
 }
 .social li {
   list-style: none;
