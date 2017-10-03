@@ -1840,6 +1840,10 @@ input[type="text"] {
 
 /* ANIMAÇÃO CAIXA */
 
+.content {
+  position: relative;
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -1853,7 +1857,7 @@ input[type="text"] {
   background-color: #262d42;
 }
 
-.container:hover .overlay {
+.content:hover .overlay {
   opacity: 1;
 }
 
