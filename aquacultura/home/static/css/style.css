@@ -741,6 +741,10 @@ form label {
 #gtco-started .form-inline .form-group {
   width: 100% !important;
   margin-bottom: 10px;
+<<<<<<< HEAD
+=======
+  border-radius: ;
+>>>>>>> origin/master
 }
 #gtco-started .form-inline .form-group .form-control {
   width: 100%;
@@ -1696,10 +1700,13 @@ ba
   box-shadow: none;
 }
 
+<<<<<<< HEAD
 input[type="text"] {
   height: 50px;
 }
 
+=======
+>>>>>>> origin/master
 .form-group {
   margin-bottom: 30px;
 }
