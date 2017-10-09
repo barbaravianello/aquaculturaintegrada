@@ -741,6 +741,7 @@ form label {
 #gtco-started .form-inline .form-group {
   width: 100% !important;
   margin-bottom: 10px;
+  border-radius: ;
 }
 #gtco-started .form-inline .form-group .form-control {
   width: 100%;
@@ -1694,10 +1695,6 @@ ba
 .form-control:focus, .form-control:active {
   border: 1px solid rgba(0, 0, 0, 0.5);
   box-shadow: none;
-}
-
-input[type="text"] {
-  height: 50px;
 }
 
 .form-group {

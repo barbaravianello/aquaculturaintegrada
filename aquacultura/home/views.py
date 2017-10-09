@@ -9,16 +9,6 @@ def index(request):
 		'teams': teams,
 		'portifolios': portifolios,
 	}
-	if request.method == 'POST': 
-		form = ContactAquacultura(request.POST, request.FILES)
-		if form.is_valid():
-			context['is_valid'] = True
-			form.send_mail()
-			form = ContactAquacultura()	
-	else:
-		form = ContactAquacultura()
-	context['form'] = form
-
 	return render(request, "index.html", context)
 
 def service(request):
@@ -29,4 +19,14 @@ def service(request):
 	return render(request, "services.html", context)
 
 def contact(request):
-	return render(request, "contact.html")
+	context = {}
+	if request.method == 'POST': 
+		form = ContactAquacultura(request.POST or None)
+		if form.is_valid():
+			context['is_valid'] = True
+			form.send_mail()
+			form = ContactAquacultura()	
+	else:
+		form = ContactAquacultura()
+	context['form'] = form
+	return render(request, "contact.html", context)
