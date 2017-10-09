@@ -75,13 +75,8 @@
 								<li class="active"><a href="index.html" class="scroll-link"><span>Home</span></a></li>
 								<li><a href="#gtco-team" class="scroll-link">Equipe</a></li>
 								<li><a href="#fh5co-product-section" class="scroll-link">Portfólio</a></li>
-<<<<<<< HEAD
 								<li><a href="services.html">Serviços</a></li>
 								<li><a href="contact.html">Contato</a></li>
-=======
-								<li><a href="{% url 'home:service' %}">Serviços</a></li>
-								<li><a href="{% url 'home:contact' %}">Contato</a></li>
->>>>>>> origin/master
 								<li><a>Blog</a></li>
 							</ul>
 						</div>
@@ -189,7 +184,6 @@
 				</div>
 
 				<div class="owl-carousel owl-carousel2">
-<<<<<<< HEAD
 					<div class="content">
 					<div class="item animate-box"><a href="{% static 'images/product-1.jpg' %}" class="image-popup"><img src="{% static 'images/portifolio1.jpg' %}" alt="image">
 					<div class="overlay">
@@ -225,20 +219,6 @@
 					<div class="overlay">
     				<div class="text">13</div>
   						</div></a></div></div>
-=======
-					{% for item in portifolios %}
-					<div class="content">
-						<div class="item animate-box">
-							<a href="{{ item.image.url }}" class="image-popup">
-								<img src="{{ item.image.url }}" alt="image">
-								<div class="overlay">
-									<div class="text">{{ item.description }}</div>
-								</div>
-  							</a>
-  						</div>
-  					</div>
-  					{% endfor %}
->>>>>>> origin/master
 				</div>
 			</div>
 		</div>
@@ -309,7 +289,6 @@
 		</div>
 		{% endfor %}
 
-<<<<<<< HEAD
 	<!-- Modal 
 		<div class="modal fade" id="myModal2" role="dialog">
 			<div class="modal-dialog modal-sm" id="modal-sm">
@@ -360,8 +339,6 @@
 			</div>
 		</div>-->
 
-=======
->>>>>>> origin/master
 		<script type="text/javascript">
 			$(document).ready(function(){
 			    var speed = 800;
