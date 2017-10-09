@@ -1,4 +1,5 @@
 from django.db import models
+from fontawesome.fields import IconField
 
 class Team(models.Model):
     name = models.CharField('Nome', max_length=100)
@@ -25,7 +26,7 @@ class Service(models.Model):
     name = models.CharField('Nome', max_length=100)
     slug = models.SlugField('Atalho')
     description = models.TextField('Descrição ', blank = True)
-    image = models.ImageField(upload_to='team/images', verbose_name="Imagem", null=True, blank=True)
+    icon = IconField()
     prepopulated_fields = {'slug': ['name']}
 
     def __str__(self):

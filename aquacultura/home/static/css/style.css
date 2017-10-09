@@ -1088,6 +1088,7 @@ h1, h2, h3, h4, h5, h6 {
 color: #0090CA;
 }
 
+
 #fh5co-header {
   padding-top: 2em;
   padding-bottom: 0;
@@ -1096,32 +1097,38 @@ color: #0090CA;
 #fh5co-header .navbar-default {
   border: transparent;
   background: #fff;
-  padding-bottom: 0;
-  margin-bottom: 0;
+  padding-top: 5%;
+  height: 15%;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  top: 0;
 }
 #fh5co-header .navbar {
-  padding: 0;
-  margin: 0;
+  padding: 0;  
 }
 #fh5co-header .fh5co-navbar-brand {
   width: 100%;
-  margin: 0;
 }
 #fh5co-header .fh5co-navbar-brand .fh5co-logo {
   width: 52px;
   height: 30px;
-  padding: 0;
   font-size: 13px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
-
 }
 
+#logo1{
+  padding-left: 10%;
+  padding-top: 2%;
+}
 
-  #logo2 {
-   color: #0090CA; 
-  }
+#logo2 {
+  color: #0090CA; 
+  padding-top: 2%;
+}
 
 #fh5co-header .fh5co-navbar-brand .fh5co-logo:focus, #fh5co-header .fh5co-navbar-brand .fh5co-logo:hover {
   text-decoration: none !important;
@@ -1129,7 +1136,8 @@ color: #0090CA;
 @media screen and (max-width: 992px) {
   #fh5co-header .fh5co-navbar-brand {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: -45px;
+    margin-right: 20px;
   }
 }
 #fh5co-header .nav {

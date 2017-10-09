@@ -1,4 +1,5 @@
 {% load static %}
+{% load fontawesome %}
 
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -6,6 +7,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<head>
+		{% fontawesome_stylesheet %}
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Aquacultura Integrada</title>
@@ -94,6 +96,7 @@
 						<div class="col-md-8 col-md-offset-2 float-overlay">
 							<h2>Our Services</h2>
 							<h3>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</h3>
+							{% fontawesome_icon 'user' color='gray' %}
 						</div>
 					</div>
 				</div>
@@ -107,7 +110,7 @@
 						{% for service in services %}
 						<div class="col-md-6 animate-box">
 							<div class="fh5co-inner fh5co-services">
-								<i class="icon-heart"></i>
+								{{ service.icon.as_html }}
 								<div class="holder-section">
 									<h3>{{ service.name }}</h3>
 									<p>{{ service.description}}</p>

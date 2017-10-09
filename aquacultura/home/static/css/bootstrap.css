@@ -4696,7 +4696,7 @@ tbody.collapse.in {
 @media (min-width: 768px) {
   .navbar-collapse {
     width: auto;
-    border-top: 0;
+    padding-top: 2%;
     box-shadow: none;
   }
   .navbar-collapse.collapse {
