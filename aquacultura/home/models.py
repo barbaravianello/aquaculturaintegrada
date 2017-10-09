@@ -20,7 +20,6 @@ class Team(models.Model):
         verbose_name = 'Equipe'
         verbose_name_plural = 'Equipe'
         ordering = ['name']
-<<<<<<< HEAD
 
 
 class Service(models.Model):
@@ -61,6 +60,3 @@ class Portifolio(models.Model):
         verbose_name = 'Portifólio'
         verbose_name_plural = 'Portifólios'
         ordering = ['name']
-=======
-# Create your models here.
->>>>>>> 01b8bc671c864212ce8d73a02dbb3741749a4efe

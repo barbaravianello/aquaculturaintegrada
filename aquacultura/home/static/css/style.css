@@ -12,11 +12,8 @@
 *
 * ======================================================= */
 
-
-
-
 .gtco-container {
-  max-width: 1140px;
+  max-width: 90%;
   position: relative;
   margin: 0 auto;
   padding-left: 15px;
@@ -325,12 +322,14 @@
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
+  margin:auto;
 }
 .gtco-staff h3 {
-  font-size: 24px;
-  margin-bottom: 5px;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 .gtco-staff p {
+  width: 100px;
   margin-bottom: 30px;
 }
 .gtco-staff .role {
@@ -525,7 +524,7 @@ form label {
   #gtco-started,
   #gtco-footer,
   .gtco-section {
-    padding: 3em 0;
+    padding: 0;
   }
 }
 
@@ -980,7 +979,10 @@ form label {
 
 #equipe {
   background-color: transparent;
-  padding: 0;
+  padding: 0px;
+  max-width: 150px;
+  max-height: 150px;
+  float:center;
 }
 
 #equipe_titulo {
@@ -990,7 +992,7 @@ form label {
 }
 
 #equipe_fotos {
-  margin-bottom: 15%;
+  margin-bottom: 0%;
 }
 
 #eject {
@@ -1087,28 +1089,29 @@ h1, h2, h3, h4, h5, h6 {
 color: #0090CA;
 }
 
-
 #fh5co-header {
   padding-top: 2em;
   padding-bottom: 0;
   margin-bottom: 1em;
 }
+
+.main-nav{
+  margin-right: 20px;
+}
+
 #fh5co-header .navbar-default {
   border: transparent;
   background: #fff;
-  padding-top: 5%;
-  height: 15%;
-  position: fixed;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-  top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 #fh5co-header .navbar {
-  padding: 0;  
+  padding: 0;
+  margin: 0;
 }
 #fh5co-header .fh5co-navbar-brand {
   width: 100%;
+  margin: 0;
 }
 #fh5co-header .fh5co-navbar-brand .fh5co-logo {
   width: 52px;
@@ -1117,16 +1120,16 @@ color: #0090CA;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
+
 }
 
 #logo1{
-  padding-left: 10%;
-  padding-top: 2%;
+
 }
 
 #logo2 {
   color: #0090CA; 
-  padding-top: 2%;
+  margin-right: 10%;
 }
 
 #fh5co-header .fh5co-navbar-brand .fh5co-logo:focus, #fh5co-header .fh5co-navbar-brand .fh5co-logo:hover {
@@ -1135,10 +1138,11 @@ color: #0090CA;
 @media screen and (max-width: 992px) {
   #fh5co-header .fh5co-navbar-brand {
     text-align: center;
-    margin-bottom: -45px;
-    margin-right: 20px;
+    margin-bottom: -80px;
+    padding-bottom: 5px;
   }
 }
+
 #fh5co-header .nav {
   width: 100%;
 }
