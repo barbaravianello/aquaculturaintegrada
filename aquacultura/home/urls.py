@@ -5,8 +5,6 @@ from django.conf.urls.static import static
 
 urlpatterns = [
 	url(r'^$', views.index, name='index'),
-	url(r'^servicos$', views.service, name='service'),
-	url(r'^contato$', views.contact, name='contact'),
 ]
 
 if settings.DEBUG:
