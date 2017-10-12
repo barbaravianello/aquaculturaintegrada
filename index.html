@@ -59,8 +59,8 @@
 	<body>
 	<div class="box-wrap">
 		<header role="banner" id="fh5co-header">
-			<div class="container">
-				<nav class="navbar navbar-default ">
+			<nav class="navbar navbar-default" id="mainnav">
+				<div class="container">
 					<div class="row">
 						<div class="col-md-3">
 							<div class="fh5co-navbar-brand">
@@ -87,10 +87,8 @@
 								<li><a>Blog</a></li>
 							</ul>
 						</div>
-
 					</div> 
-				</nav>
-		  </div>
+		  </div></nav>
 		</header>
 
 	
@@ -416,6 +414,19 @@
 			      autoWidth: true
 			    });
 			  });
+			});
+			
+			$(document).ready(function() {
+			  var navpos = $('#mainnav').offset();
+			  console.log(navpos.top);
+				$(window).bind('scroll', function() {
+				  if ($(window).scrollTop() > navpos.top) {
+				   $('#mainnav').addClass('navbar-fixed-top');
+				   }
+				   else {
+					 $('#mainnav').removeClass('navbar-fixed-top');
+				   }
+				});
 			});
 		</script>
 	</body>
