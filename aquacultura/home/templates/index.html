@@ -61,10 +61,10 @@
 	<body>
 	<div class="box-wrap">
 		<header role="banner" id="fh5co-header">
-			<div class="container">
-				<nav class="navbar navbar-default">
+			<nav class="navbar navbar-default" id="mainnav">
+				<div class="container">
 					<div class="row">
-						<div class="col-md-4">
+						<div class="col-md-4" align="center">
 							<div class="fh5co-navbar-brand">
 								<a class="fh5co-logo" id="logo1" href="index.html">AQUACULTURA </a> 
 								<a class="fh5co-logo" id="logo2" href="{% url 'home:index' %}"> INTEGRADA </a> 
@@ -86,12 +86,12 @@
 								<li><a href="#fh5co-product-section" class="scroll-link">Portfólio</a></li>
 								<li><a href="{% url 'home:service' %}">Serviços</a></li>
 								<li><a href="{% url 'home:contact' %}">Contato</a></li>
-								<li><a>Blog</a></li>
+								<li><a href="{% url 'blog:home' %}">Blog</a></li>
 							</ul>
 						</div>
 					</div> 
-				</nav>
-		    </div>
+		    	</div>
+			</nav>
 		</header>
 
 		<!-- FIM DO MENU -->
@@ -190,7 +190,7 @@
 					</div>
 				</div>
 
-				<div class="owl-carousel owl-carousel2">
+				<div class="owl-carousel owl-carousel2" id="portifolio">
 					{% for item in portifolios %}
 					<div class="content">
 						<div class="item animate-box">
@@ -312,6 +312,19 @@
 			      autoWidth: true
 			    });
 			  });
+			});
+
+			$(document).ready(function() {
+			  var navpos = $('#mainnav').offset();
+			  console.log(navpos.top);
+				$(window).bind('scroll', function() {
+				  if ($(window).scrollTop() > navpos.top) {
+				   $('#mainnav').addClass('navbar-fixed-top');
+				   }
+				   else {
+					 $('#mainnav').removeClass('navbar-fixed-top');
+				   }
+				});
 			});
 		</script>
 	</body>

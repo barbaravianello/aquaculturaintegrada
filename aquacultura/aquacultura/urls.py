@@ -19,5 +19,7 @@ from home import views
 
 urlpatterns = [
 	url(r'^', include('home.urls', namespace='home')),
+	url(r'^blog/', include('blog.urls', namespace='blog')),
+	url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     url(r'^admin/', admin.site.urls),
 ]

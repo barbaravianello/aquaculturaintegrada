@@ -1,0 +1,61 @@
+
+a,
+#home-slider .caption h1 span, 
+#twitter-carousel .item span, 
+#footer .footer-bottom, 
+#single-portfolio .close-folio-item:hover, 
+.single-table.featured .btn.btn-primary, 
+.contact-info ul li a:hover 
+{
+  color: #ffcf0b;
+}
+.address a, .text-center, #footer .footer-bottom a  {
+	color:#293d50;
+}
+.btn.btn-primary:hover {
+  background-color: #ffcf0b;
+}
+
+a:hover, a:focus {
+	color: #027db3;
+}
+
+ 
+.btn.btn-primary, .progress-bar.progress-bar-primary{
+	background-color: #f4ae00;
+}
+section,
+.service-icon, 
+.single-table.featured,
+.twitter-icon .fa-twitter, 
+.twitter-left-control:hover, .twitter-right-control:hover, 
+.post-icon, 
+.entry-header .date:after, 
+.btn-loadmore:hover, 
+#footer,  
+.left-control:hover, 
+.right-control:hover, 
+.folio-overview a:hover {
+  background-color:#7e98b4;
+}
+
+.caption .btn-start:hover{
+	background-color: rgba(41,61,80,.4);
+}
+
+.navbar.navbar-default {
+  background-color:rgba(255,255,255,0.9);
+}
+
+
+.btn-loadmore:hover  {
+	border: 1px solid #028fcc;
+}
+
+.caption .btn-start:hover{
+	border-color: white;
+}
+
+.twitter-icon .fa-twitter:after {
+	border-color: #028fcc transparent transparent;
+}

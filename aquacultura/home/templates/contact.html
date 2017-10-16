@@ -61,10 +61,10 @@
 	<body>
 	<div class="box-wrap">
 		<header role="banner" id="fh5co-header">
-			<div class="container">
-				<nav class="navbar navbar-default">
+			<nav class="navbar navbar-default" id="mainnav">
+				<div class="container">
 					<div class="row">
-						<div class="col-md-4">
+						<div class="col-md-4" align="center">
 							<div class="fh5co-navbar-brand">
 								<a class="fh5co-logo" id="logo1" href="index.html">AQUACULTURA </a> 
 								<a class="fh5co-logo" id="logo2" href="index.html"> INTEGRADA </a> 
@@ -84,12 +84,12 @@
 								<li><a href="{% url 'home:index' %}">Portfólio</a></li>
 								<li><a href="{% url 'home:service' %}">Serviços</a></li>
 								<li class="active"><a href="{% url 'home:contact' %}">Contato</a></li>
-								<li><a>Blog</a></li>
+								<li><a href="{% url 'blog:home' %}">Blog</a></li>
 							</ul>
 						</div>
 					</div> 
-				</nav>
-		  </div>
+		  		</div>
+			</nav>
 		</header>
 		
 		<!-- END: header -->
@@ -202,6 +202,21 @@
 
 		<!-- Main JS (NÃO REMOVER) -->
 		<script src="{% static 'js/main.js' %}"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+			  var navpos = $('#mainnav').offset();
+			  console.log(navpos.top);
+				$(window).bind('scroll', function() {
+				  if ($(window).scrollTop() > navpos.top) {
+				   $('#mainnav').addClass('navbar-fixed-top');
+				   }
+				   else {
+					 $('#mainnav').removeClass('navbar-fixed-top');
+				   }
+				});
+			});
+		</script>
 	</body>
 </html>
 
