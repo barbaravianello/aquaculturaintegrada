@@ -125,6 +125,10 @@
 							<script type="text/javascript">
 		                       alert("Sua mensagem foi enviada com sucesso. A Aquacultura agradece pelo seu contato!");
 		                    </script>
+		                {% else %}
+		                	<script type="text/javascript">
+		                       alert("Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente mais tarde.");
+		                    </script>
                         {% endif %}
                         {% csrf_token %}
                         	<fieldset>

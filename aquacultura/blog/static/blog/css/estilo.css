@@ -7,6 +7,11 @@
     padding-top: 0px;
     list-style: none;
 }
+
+.container{
+  width:100%;
+}
+
 .linkpost:hover .titulo{
   background-color: rgba(49,60,71,0.94);
   transition: 300ms;
