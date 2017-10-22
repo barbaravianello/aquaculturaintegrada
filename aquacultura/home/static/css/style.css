@@ -1140,7 +1140,7 @@ color: #0090CA;
   #fh5co-header .fh5co-navbar-brand {
     text-align: center;
     margin-bottom: -80px;
-    padding-bottom: 5px;
+    padding-top: 20px;
   }
 }
 
@@ -1713,7 +1713,7 @@ ba
 }
 
 input[type="text"] {
-  height: 50px;
+  height: 35px;
 }
 
 .form-group {

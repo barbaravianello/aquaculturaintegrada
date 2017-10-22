@@ -63,7 +63,7 @@
 		<header role="banner" id="fh5co-header">
 			<nav class="navbar navbar-default" id="mainnav">
 				<div class="container">
-					<div class="row">
+					<div class="row" style="margin-top:-5px">
 						<div class="col-md-4" align="center">
 							<div class="fh5co-navbar-brand">
 								<a class="fh5co-logo" id="logo1" href="index.html">AQUACULTURA </a> 
@@ -124,11 +124,7 @@
 						{% if is_valid %}
 							<script type="text/javascript">
 		                       alert("Sua mensagem foi enviada com sucesso. A Aquacultura agradece pelo seu contato!");
-		                    </script>
-		                {% else %}
-		                	<script type="text/javascript">
-		                       alert("Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente mais tarde.");
-		                    </script>
+		                    </script>	
                         {% endif %}
                         {% csrf_token %}
                         	<fieldset>
