@@ -65,10 +65,21 @@
 
 	</head>
 	<body>
-	<div class="box-wrap">
-			<header role="banner" id="fh5co-header">
-			<div class="container">
-				<nav class="navbar navbar-default">
+
+		<div style="height:30px;display:inline-flex;width:100%;background-color:#ffffff;">
+        <div style="width:initial;margin:auto;height: 100%;display: inherit;">
+            <div style="height:100%;padding:5px;margin:0 5px;display:inherit;">
+                <img style="height: 100%;margin:0 5px;" src="images/telephone.png"><p style="color:#4b63ab;font-size: 13px">(84) 9 9999-0000 </p>
+            </div>
+            <div style="height:100%;padding:5px;margin:0 5px;display:inherit;">
+                <img style="height: 100%;margin:0 5px;" src="images/whatsapp.png"><p style="color:#4b63ab; font-size: 13px">(84) 9 9999-0000</p>
+            </div>
+        </div>
+    	</div>
+<div class="box-wrap">
+		<header role="banner" id="fh5co-header">
+			<nav class="navbar navbar-default" id="mainnav">
+				<div class="container">
 					<div class="row">
 						<div class="col-md-3">
 							<div class="fh5co-navbar-brand">
@@ -76,7 +87,16 @@
 								<a class="fh5co-logo" id="logo2" href="index.html"> INTEGRADA </a> 
 							</div>
 						</div>
-						<div class="col-md-9 main-nav">
+
+							<div class="navbar-header">
+								 <a class="navbar-toggle" data-toggle="collapse" data-target="navbar-collapse">
+								 	<span class="icon-bar"></span>
+								 	<span class="icon-bar"></span>
+								 	<span class="icon-bar"></span>
+								 	</a>
+							</div>
+
+						<div class="col-md-9 main-nav navbar-collapse collapse">
 							<ul class="nav text-right">
 								<li><a href="index.html"><span>Home</span></a></li>
 								<li><a href="index.html">Equipe</a></li>
@@ -87,11 +107,20 @@
 							</ul>
 						</div>
 					</div> 
-				</nav>
-		  </div>
-		</header>
-		
+		  </div></nav>
+		  </header>
+
+
+
+
 		<!-- END: header -->
+
+
+		<!-- FIM DO BOTAO DE VOLTA AO TOPO -->
+		<a id="volta-ao-topo" href="#top" class="glyphicon glyphicon-chevron-up"></a>
+		<!-- FIM DO BOTAO DE VOLTA AO TOPO -->
+
+
 		<div id="fh5co-intro-section" class="section-overlay animate-box" data-animate-effect="fadeIn">
 			<div class="fh5co-intro-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url(images/intro.jpg);">
 				<div class="container">
@@ -178,6 +207,24 @@
 	</div>
 	<!-- END: box-wrap -->
 	
+
+
+	 <script type="text/javascript">
+		$(document).ready(function() {
+		  var navpos = $('#mainnav').offset();
+		  console.log(navpos.top);
+			$(window).bind('scroll', function() {
+			  if ($(window).scrollTop() > navpos.top) {
+			   $('#mainnav').addClass('navbar-fixed-top');
+			   }
+			   else {
+				 $('#mainnav').removeClass('navbar-fixed-top');
+			   }
+			});
+		});
+	</script>
+
+
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->

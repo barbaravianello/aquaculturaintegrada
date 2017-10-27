@@ -1,0 +1,102 @@
+{% extends 'blog/base.html' %}
+
+{% block header %}
+  <title>{{ post.title }} - EJECT</title>
+  <meta name="description" content="{{ post.subtitle }}">
+  <meta name="keywords" content="{{ post.keywords }}">
+  <meta name="og:description" content="{{ post.subtitle }}">
+  <meta name="og:keywords" content="{{ post.keywords }}">
+  <meta property="og:title" content="{{ post.title }}">
+  <meta property="og:url" content="{{ post.get_absolute_url }}">
+  <meta property="og:image" content="{{post.capa.url}}">
+{% endblock %}
+
+{% block content %}
+  <article class="animated fadeIn">
+        <header class="animated fadeIn">
+          <!-- The title and subtitle shown in your Instant Article -->
+          <h1>{{  post.title }}</h1>
+          <h2>{{  post.subtitle  }}</h2>
+          Categoria:
+            <a href="{{ post.categoria.get_absolute_url }}">{{post.categoria}} </a>
+         
+          <br>by:
+          {% for Editor in post.editor.all %}
+          {% if forloop.counter > 1 and not forloop.last%}
+            ,
+          {% endif %}
+          {% if forloop.last and not forloop.first%}
+            e
+          {% endif %}
+            <a rel="facebook" target=“_blank” href="{{Editor.facebooklink}}">{{Editor.nome}} </a>
+          {% endfor %}
+          <br>        
+          <time class="op-published" datetime="2014-11-11T04:44:16Z">{{ post.published_date }}</time>
+          <br>
+          <div class="fb-like animated fadeIn" data-href="{{ post.get_absolute_url }}" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+        </header>
+        <footer class="textopostagem">
+          {% autoescape off %}
+              <p>{{post.content}}</p>
+          {% endautoescape %}
+          {%if post.picture1%}
+            <figure>
+            <img src="{{post.picture1.url}}">
+            <figcaption>{{post.picturefigcaption1}}</figcaption>
+            </figure>
+          {%endif%}
+          {%if post.text2%}
+            <p>{{post.text2|linebreaks}}</p>
+          {%endif%}
+          {%if post.picture2%}
+            <figure>
+            <img src="{{post.picture2.url}}">
+            <figcaption>{{post.picturefigcaption2}}</figcaption>
+            </figure>
+          {%endif%}
+          {%if post.text3%}
+            <p>{{post.text3|linebreaks}}</p>
+          {%endif%}
+          {%if post.picture3%}
+            <figure>
+            <img src="{{post.picture3.url}}">
+            <figcaption>{{post.picturefigcaption3}}</figcaption>
+            </figure>
+          {%endif%}
+        </footer>
+      </article>
+
+      {%if postssemelhantes%}
+      <article class="animated fadeIn" style="margin-top: 15px;margin-bottom: 15px;">
+        <div id="categoriassemelhantes" class="animated fadeIn">
+          Veja textos relacionados:
+          <ul class="animated fadeIn">
+              {% for post in postssemelhantes %}
+                  <li>
+                    <a href="{{ post.get_absolute_url }}">
+                      <div class="minipost" style="background-image: url({{post.capa.url}});">
+                        <div class="minititulo">
+                            <h3>
+                              {{post.title}}
+                            </h3>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+              {% endfor %}
+
+            </ul>
+        </div>
+      </article>
+      {%endif%}
+      <article class="animated fadeIn">
+      	<div class="container" style="width:initial; padding:0;">
+
+      		<div class="row" style="padding:0;">
+  
+        			<div class="col-xs-12 fb-comments animated fadeIn" data-href="http://blog.ejectufrn.com.br{{ post.get_absolute_url }}" data-numposts="5"></div>
+              <!--<div class="col-xs-12 fb-comments" data-href="{{ post.get_absolute_url }}" data-numposts="5"></div>-->
+        		</div>
+        	</div>
+      </article>
+{% endblock %}

@@ -995,9 +995,99 @@ form label {
   font-weight: bold;
 }
 
+#padding-quemsomos {
+  padding-top: 8% !important;
+  padding-bottom: 5% !important;
+}
 
+#padding-equipe {
+  padding-top: 7% !important;
+  padding-bottom: 0% !important;
+  clear: both;
+}
 
+#padding-portifolio {
+  padding-top: 5%;
+  padding-bottom: 8em;
+}
 
+#div-equipe {
+  margin-top: -7%;
+  margin-bottom: 7%;
+  float: left;
+}
+
+#p-equipe {
+  text-align: center;
+}
+
+.p-quemsomos{
+  margin-right: 15%; 
+}
+
+#img-ajuste{
+  padding-left: 4em;
+}
+
+#o-que-ofertamos{
+  padding-left: 10% !important;
+}
+
+#nossa-meta {
+  padding-right: 10% !important;
+}
+
+#row-quemsomos-1 {
+  margin-bottom: 5%;
+}
+
+.img-quemsomos {
+  width: 60% !important;
+}
+
+.overlay-quemsomos{
+  height: 100% !important;
+  width: 60% !important;
+}
+
+#img-raceway {
+  padding-left: 7% !important;
+  padding-right: 0% !important;
+}
+
+#img-viveiro {
+  padding-left: 0% !important;
+  padding-right: 0% !important;
+}
+
+#img-bacias {
+  padding-left: 0% !important;
+  padding-right: 7% !important;
+}
+
+a[href="#top"]{
+    padding:10px;
+    position:fixed;
+    top: 90%;
+    right:40px;
+    display:none;
+    font-size: 30px;
+}
+a[href="#top"]:hover{
+    text-decoration:none;
+}
+
+#volta-ao-topo{
+  color: #0090cd;
+}
+
+#myModal4 .modal-dialog{
+        overflow-y: initial !important
+}
+#myModal4 .modal-body{
+        height: 250px;
+        overflow-y: auto;
+}
 
 
 

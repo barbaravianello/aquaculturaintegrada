@@ -61,31 +61,40 @@
 	<body>
 	<div class="box-wrap">
 		<header role="banner" id="fh5co-header">
-			<div class="container">
-				<nav class="navbar navbar-default">
-					<div class="row">
-						<div class="col-md-4">
+			<nav class="navbar navbar-default" id="mainnav">
+				<div class="container">
+					<div class="row" style="margin-top:-5px">
+						<div class="col-md-4" align="center">
 							<div class="fh5co-navbar-brand">
-								<a class="fh5co-logo" href="index.html">AQUACULTURA </a> 
-								<a class="fh5co-logo" id="logo2" href="index.html"> INTEGRADA </a> 
+								<a class="fh5co-logo" id="logo1" href="index.html">AQUACULTURA </a> 
+								<a class="fh5co-logo" id="logo2" href="{% url 'home:index' %}"> INTEGRADA </a> 
 							</div>
 						</div>
-						<div class="col-md-8 main-nav">
+
+						<div class="navbar-header">
+						    <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						    </a>
+						</div>
+
+						<div class="col-md-8 main-nav navbar-collapse collapse">
 							<ul class="nav text-right">
-								<li class="active"><a href="index.html" class="scroll-link"><span>Home</span></a></li>
+								<li class="active"><a href="{% url 'home:index' %}" class="scroll-link"><span>Home</span></a></li>
 								<li><a href="#gtco-team" class="scroll-link">Equipe</a></li>
 								<li><a href="#fh5co-product-section" class="scroll-link">Portfólio</a></li>
-								<li><a href="services.html">Serviços</a></li>
-								<li><a href="contact.html">Contato</a></li>
-								<li><a>Blog</a></li>
+								<li><a href="{% url 'home:service' %}">Serviços</a></li>
+								<li><a href="{% url 'home:contact' %}">Contato</a></li>
+								<li><a href="{% url 'blog:home' %}">Blog</a></li>
 							</ul>
 						</div>
 					</div> 
-				</nav>
-		  </div>
+		    	</div>
+			</nav>
 		</header>
 
-			<!-- FIM DO MENU -->
+		<!-- FIM DO MENU -->
 
 		<!-- SLIDESHOW -->
 		
@@ -150,18 +159,16 @@
 						<h3>Nossa Equipe</h3>
 					</div>
 				</div>
-				<div id="equipe_fotos" class="row">
+				<div id="equipe_fotos" class="owl-carousel owl-carousel2 row">
 					{% for team in teams %}
-					<div class="col-md-4 animate-box" data-animate-effect="fadeIn">
-						<div class="gtco-staff">
-							<img id="equipe" class="btn btn-primary" data-toggle="modal" data-target="#myModal{{ team.slug }}" src="{{ team.image.url }}" alt="{{ team.name }}">
+					<div class="col-md-12 animate-box" data-animate-effect="fadeIn">
+						<div class=" item gtco-staff">
+							<img id="equipe" class="btn btn-primary" data-toggle="modal" data-target="#myModal{{ team.slug }}" src="{{ team.image.url }}" alt="{{ team.name }}" >
 							<h3>{{team.name}}</h3>
 							<strong class="role">{{team.job}}</strong>
 							<ul class="gtco-social-icons">
 								<li><a href="#"><i class="icon-facebook"></i></a></li>
 								<li><a href="#"><i class="icon-twitter"></i></a></li>
-								<li><a href="#"><i class="icon-dribbble"></i></a></li>
-								<li><a href="#"><i class="icon-github"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -173,7 +180,7 @@
 
 
 		<!-- PORTFÓLIO -->
-		<div id="fh5co-product-section">
+		<div id="fh5co-product-section" class="fh5co-grey-section">
 			<div class="container">
 				<div class="row">
 					<br>
@@ -183,42 +190,19 @@
 					</div>
 				</div>
 
-				<div class="owl-carousel owl-carousel2">
+				<div class="owl-carousel owl-carousel2" id="portifolio">
+					{% for item in portifolios %}
 					<div class="content">
-					<div class="item animate-box"><a href="{% static 'images/product-1.jpg' %}" class="image-popup"><img src="{% static 'images/portifolio1.jpg' %}" alt="image">
-					<div class="overlay">
-    				<div class="text">13</div>
-  						</div></a></div></div>
-
-					<div class="content">
-					<div class="item animate-box"><a href="{% static 'images/product-2.jpg' %}" class="image-popup"><img src="{% static 'images/portifolio3.jpg' %}" alt="image">
-					<div class="overlay">
-    				<div class="text">13</div>
-  						</div></a></div></div>
-
-  					<div class="content">
-					<div class="item animate-box"><a href="{% static 'images/product-3.jpg' %}" class="image-popup"><img src="{% static 'images/portifolio2.jpg' %}" alt="image">
-					<div class="overlay">
-    				<div class="text">13</div>
-  						</div></a></div></div>
-
-  					<div class="content">
-					<div class="item animate-box"><a href="{% static 'images/product-4.jpg' %}" class="image-popup"><img src="{% static 'images/product-4.jpg' %}" alt="image">
-					<div class="overlay">
-    				<div class="text">13</div>
-  						</div></a></div></div>
-
-  					<div class="content">
-					<div class="item animate-box"><a href="{% static 'images/product-1.jpg' %}" class="image-popup"><img src="{% static 'images/product-1.jpg' %}" alt="image">
-					<div class="overlay">
-    				<div class="text">13</div>
-  						</div></a></div></div>
-
-  					<div class="content">
-					<div class="item animate-box"><a href="{% static 'images/product-2.jpg' %}" class="image-popup"><img src="{% static 'images/product-2.jpg' %}" alt="image">
-					<div class="overlay">
-    				<div class="text">13</div>
-  						</div></a></div></div>
+						<div class="item animate-box">
+							<a href="{{ item.image.url }}" class="image-popup">
+								<img src="{{ item.image.url }}" alt="image">
+								<div class="overlay">
+									<div class="text">{{ item.description }}</div>
+								</div>
+  							</a>
+  						</div>
+  					</div>
+  					{% endfor %}
 				</div>
 			</div>
 		</div>
@@ -253,7 +237,7 @@
 		<!-- Bootstrap -->
 		<script src="{% static 'js/bootstrap.min.js' %}"></script>
 		<!-- Owl carousel -->
-			<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+		<script src="{% static 'js/owl.carousel.min.js' %}"></script>
 		<!-- Waypoints -->
 		<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
 		<!-- Parallax Stellar -->
@@ -264,7 +248,7 @@
 
 	<!-- Modal -->
 		{% for team in teams %}
-		<div class="modal fade" id="myModal{{team.slug}}" role="dialog">
+		<div class="modal fade" id="myModal{{team.slug}}" role="dialog" style="margin:auto">
 			<div class="modal-dialog modal-sm" id="modal-sm">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -289,57 +273,8 @@
 		</div>
 		{% endfor %}
 
-	<!-- Modal 
-		<div class="modal fade" id="myModal2" role="dialog">
-			<div class="modal-dialog modal-sm" id="modal-sm">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Anízio Neto Da Silva</h4>
-					</div>
-					<div class="modal-body">
-						<p>Bacharel em Engenharia de Aquicultura – UFRN- Universidade Federal do Rio Grande do Norte.</p><p>Especializado em Carcinicultura – UFRN - Universidade Federal do Rio Grande do Norte. </p>
-						<div class="owl-carousel owl-carousel1 owl-carousel-fullwidth fh5co-light-arrow animate-box" data-animate-effect="fadeIn">
-							<div class="item"><img src="{% static 'images/mar.jpg' %}" alt="image"></div>
-							<div class="item"><img src="{% static 'images/img_large_2.jpg' %}" alt="image"></div>
-							<div class="item"><img src="{% static 'images/img_large_3.jpg' %}" alt="image"></div>
-							<div class="item"><img src="{% static 'images/img_large_4.jpg' %}" alt="image"></div>
-							<div class="item"><img src="{% static 'images/img_large_5.jpg' %}" alt="image"></div>
-						</div>
-						<div class="modal-footer">
-						    <button class="btn btn-default" data-dismiss="modal">Fechar</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>-->
-
-	<!-- Modal 
-		<div class="modal fade" id="myModal3" role="dialog">
-			<div class="modal-dialog modal-sm" id="modal-sm">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Anízio Neto Da Silva</h4>
-					</div>
-					<div class="modal-body">
-						<p>Especializado em Carcinicultura – UFRN - Universidade Federal do Rio Grande do Norte. </p>
-						<div class="owl-carousel owl-carousel1 owl-carousel-fullwidth fh5co-light-arrow animate-box" data-animate-effect="fadeIn">
-							<div class="item"><img src="{% static 'images/mar.jpg' %}" alt="image"></div>
-							<div class="item"><img src="{% static 'images/img_large_2.jpg' %}" alt="image"></div>
-							<div class="item"><img src="{% static 'images/img_large_3.jpg' %}" alt="image"></div>
-							<div class="item"><img src="{% static 'images/img_large_4.jpg' %}" alt="image"></div>
-							<div class="item"><img src="{% static 'images/img_large_5.jpg' %}" alt="image"></div>
-						</div>
-						<div class="modal-footer">
-						    <button class="btn btn-default" data-dismiss="modal">Fechar</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>-->
-
 		<script type="text/javascript">
+
 			$(document).ready(function(){
 			    var speed = 800;
 
@@ -377,6 +312,19 @@
 			      autoWidth: true
 			    });
 			  });
+			});
+
+			$(document).ready(function() {
+			  var navpos = $('#mainnav').offset();
+			  console.log(navpos.top);
+				$(window).bind('scroll', function() {
+				  if ($(window).scrollTop() > navpos.top) {
+				   $('#mainnav').addClass('navbar-fixed-top');
+				   }
+				   else {
+					 $('#mainnav').removeClass('navbar-fixed-top');
+				   }
+				});
 			});
 		</script>
 	</body>

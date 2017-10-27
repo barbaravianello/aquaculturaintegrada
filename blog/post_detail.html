@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- <title>Eject - Blog</title> -->
+    <meta charset="utf-8">
+    <meta name="geo.region" content="BR-RN" />
+    <meta name="geo.placename" content="Natal" />
+    <meta name="geo.position" content="-5.832363;-35.205355" />
+    <meta name="ICBM" content="-5.832363, -35.205355" />
+    <meta name="robots" content="index, follow">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:site_name" content="EJECT-Blog ">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' type='text/css'>
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <meta name="theme-color" content="#7a94af">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <meta property="og:type" content="blog" />
+</head>
+<body>
+    <header class="navbar navbar-default" role="navigation" id="header">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://ejectufrn.com.br/blog">
+              <h1><img class="img-responsive" src="img/logo.svg" alt="logo-eject" style="width:160px;height:50px;"></h1>
+            </a>
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="scroll active"> <a href="#home">Blog</a></li>
+              <li class="scroll"> <a href="http://ejectufrn.com.br/">Site</a></li>
+            </ul>
+          </div>
+        </div>
+      </header><!--/.navbar-->
+    
+    <div class="container" style="margin-top:10px;">
+      <div class="row">
+        <div class="col-xs-12 visible-xs animated fadeIn">
+          <form method="get" action="http://www.google.com/search" id="search">
+            <input type="hidden" name="sitesearch" value="http://blog.ejectufrn.com.br/"></input>
+            <input type="text" placeholder="Pesquisar no site" name="q"></input>
+            <button type="submit" id="btnsearch">
+              <img src="img/search.svg">
+            </button>
+          </form>
+          <div class="categorias animated fadeIn">
+            <button id="btncategoriasup">
+              Categorias
+              <img src="img/more.svg">
+            </button>
+            <ul id="listacategoriasup" class="animated fadeIn" style="display: none;" >
+                  <li>
+                    <a href="/">
+                      Todas
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#categoria">
+                      Categoria
+                    </a>
+                  </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-9">
+
+  <title>Título - EJECT</title>
+  <meta name="description" content="{{ post.subtitle }}">
+  <meta name="keywords" content="{{ post.keywords }}">
+  <meta name="og:description" content="{{ post.subtitle }}">
+  <meta name="og:keywords" content="{{ post.keywords }}">
+  <meta property="og:title" content="{{ post.title }}">
+  <meta property="og:url" content="{{ post.get_absolute_url }}">
+  <meta property="og:image" content="{{post.capa.url}}">
+
+
+
+  <article class="animated fadeIn">
+        <header class="animated fadeIn">
+          <!-- The title and subtitle shown in your Instant Article -->
+          <h1>Título</h1>
+          <h2>Subtítulo</h2>
+          Categoria:
+            <a href="{{ post.categoria.get_absolute_url }}">Categoria </a>
+         
+          <br>by:
+            <a rel="facebook" target=“_blank” href="{{Editor.facebooklink}}">Nome do editor </a>
+          <br>        
+          <time class="op-published" datetime="2014-11-11T04:44:16Z">Data de Publicação</time>
+          <br>
+          <div class="fb-like animated fadeIn" data-href="{{ post.get_absolute_url }}" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+        </header>
+        <footer class="textopostagem">
+              <p>Conteúdo do Post</p>
+            <figure>
+            <img src="img/posts/img.jpg">
+            <figcaption> Imagem 1 </figcaption>
+            </figure>
+            <p>De acordo com o modelo de game desenvolvido por Richard Bartle, existem 4 tipos de gamer: Os. Predadores, que só querem a derrota do próximo, não se importam com nada, a menos que seja algo que sirva pra derrotar o próximo e adoram o reconhecimento; os exploradores que buscam entender o real sentido das coisas, estão envolvidos apenas para colecionar conhecimentos e artefatos, importam-se bastante com o aprendizados dos demais e por isso adora ensinar os outros; os comunicadores, que buscam sempre interagir com todos, se divertem em fazer novos contatos e amizades, gostam do reconhecimento por seus seguidores, contatos e influência; e por fim os conquistadores, que buscam sempre aumentar o total de pontos, se divertem ganhando, participam das coisas com o objetivo de finalizar o jogo e gostam do reconhecimento pelo que fazem.</p>
+            <figure>
+            <img src="img/posts/img.jpg">
+            <figcaption> Imagem 2 </figcaption>
+            </figure>
+            <p>Para que esse processo ocorra da melhor forma, a organização precisa mapear os processos que estão em desenvolvimento na empresa, assim como os anseios dos seus membros, para, a partir da junção deles, criar um game que se encaixe nos moldes desses processos e que gere uma recompensa e um engajamento de seus colaboradores.</p>
+            <img src="img/posts/img.jpg">
+            <figcaption>Legenda 3</figcaption>
+            </figure>
+            <p>Quer saber mais sobre como a Gamificação influencia no dia a dia da EJECT? Entre em contato conosco!</p>
+        </footer>
+      </article>
+
+      <article class="animated fadeIn" style="margin-top: 15px;margin-bottom: 15px;">
+        <div id="categoriassemelhantes" class="animated fadeIn">
+          Veja textos relacionados:
+          <ul class="animated fadeIn">
+                  <li>
+                    <a href="{{ post.get_absolute_url }}">
+                      <div class="minipost" style="background-image: url('img/posts/img.jpg');">
+                        <div class="minititulo">
+                            <h3>
+                              Título
+                            </h3>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+
+            </ul>
+        </div>
+      </article>
+      <article class="animated fadeIn">
+      	<div class="container" style="width:initial; padding:0;">
+
+      		<div class="row" style="padding:0;">
+  
+        			<div class="col-xs-12 fb-comments animated fadeIn" data-href="http://blog.ejectufrn.com.br{{ post.get_absolute_url }}" data-numposts="5"></div>
+              <!--<div class="col-xs-12 fb-comments" data-href="{{ post.get_absolute_url }}" data-numposts="5"></div>-->
+        		</div>
+        	</div>
+      </article>
+ </div>
+        <div class="col-sm-3 hidden-xs animated fadeIn" style="padding-top:5px; margin: 0">
+          <form method="get" action="http://www.google.com/search" id="search">
+            <input type="hidden" name="sitesearch" value="http://blog.ejectufrn.com.br"></input>
+            <input type="text" placeholder="Pesquisar no site" name="q"></input>
+            <button type="submit" id="btnsearch">
+              <img src="img/search.svg">
+            </button>
+          </form>
+            <!-- <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fejectrn&tabs&width=263&height=214&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="100%" style="border:none;overflow:hidden;box-shadow: 2px 2px 10px #ddd;" scrolling="no" frameborder="0" allowTransparency="true"></iframe> -->
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fejectufrn%2F&tabs=capa&width=262&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="100%" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+
+          <div class="cadastroemail">
+            <p>
+              Quer receber por email?
+            </p>
+            <form action="#" method="post" id="formemail">
+              <button type="submit" value="submit" id="btnsend">
+                <img src="img/enviar.svg">
+              </button>
+            </form>
+          </div>
+
+          <div class="categorias animated fadeIn">
+            <button id="btncategoriasright">
+              Categorias
+              <img src="img/more.svg">
+            </button>
+            <ul id="listacategoriasright" >
+                  <li>
+                    <a href="/">
+                      Todas
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ categoria.get_absolute_url }}">
+                      Categoria
+                    </a>
+                  </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class= "noti-msg navbar-fixed-bottom text-center animated bounceInDown">
+        <span></span>
+    </div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+      $("#btncategoriasup").click(function (a){
+        a.preventDefault();
+        $("#listacategoriasup").toggle();
+      });
+      $("#btncategoriasright").click(function (a){
+        a.preventDefault();
+        $("#listacategoriasright").toggle();
+      });
+    });
+</script>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1633239893642677',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/pt_BR/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87200101-2', 'auto');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>

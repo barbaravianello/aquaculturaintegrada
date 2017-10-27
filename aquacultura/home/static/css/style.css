@@ -12,11 +12,8 @@
 *
 * ======================================================= */
 
-
-
-
 .gtco-container {
-  max-width: 1140px;
+  max-width: 90%;
   position: relative;
   margin: 0 auto;
   padding-left: 15px;
@@ -325,12 +322,14 @@
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
+  margin:auto;
 }
 .gtco-staff h3 {
-  font-size: 24px;
-  margin-bottom: 5px;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 .gtco-staff p {
+  width: 100px;
   margin-bottom: 30px;
 }
 .gtco-staff .role {
@@ -525,7 +524,7 @@ form label {
   #gtco-started,
   #gtco-footer,
   .gtco-section {
-    padding: 3em 0;
+    padding: 0;
   }
 }
 
@@ -980,7 +979,10 @@ form label {
 
 #equipe {
   background-color: transparent;
-  padding: 0;
+  padding: 0px;
+  max-width: 150px;
+  max-height: 150px;
+  float:center;
 }
 
 #equipe_titulo {
@@ -990,7 +992,7 @@ form label {
 }
 
 #equipe_fotos {
-  margin-bottom: 15%;
+  margin-bottom: 0%;
 }
 
 #eject {
@@ -1092,6 +1094,12 @@ color: #0090CA;
   padding-bottom: 0;
   margin-bottom: 1em;
 }
+
+.main-nav{
+  margin-right: 20px;
+  width:63%;
+}
+
 #fh5co-header .navbar-default {
   border: transparent;
   background: #fff;
@@ -1109,7 +1117,6 @@ color: #0090CA;
 #fh5co-header .fh5co-navbar-brand .fh5co-logo {
   width: 52px;
   height: 30px;
-  padding: 0;
   font-size: 13px;
   font-weight: bold;
   text-transform: uppercase;
@@ -1117,10 +1124,14 @@ color: #0090CA;
 
 }
 
+#logo1{
 
-  #logo2 {
-   color: #0090CA; 
-  }
+}
+
+#logo2 {
+  color: #0090CA; 
+  margin-right: 10%;
+}
 
 #fh5co-header .fh5co-navbar-brand .fh5co-logo:focus, #fh5co-header .fh5co-navbar-brand .fh5co-logo:hover {
   text-decoration: none !important;
@@ -1128,9 +1139,11 @@ color: #0090CA;
 @media screen and (max-width: 992px) {
   #fh5co-header .fh5co-navbar-brand {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: -80px;
+    padding-top: 20px;
   }
 }
+
 #fh5co-header .nav {
   width: 100%;
 }
@@ -1211,7 +1224,10 @@ color: #0090CA;
   }
 }
 
-.owl-carousel {
+#portifolio {
+  width:80%;
+  margin-left:10%;
+  padding: 10px;
 }
 
 /* Owl Override Style */
@@ -1697,7 +1713,7 @@ ba
 }
 
 input[type="text"] {
-  height: 50px;
+  height: 35px;
 }
 
 .form-group {
