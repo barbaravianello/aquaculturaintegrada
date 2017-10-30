@@ -1,332 +1,223 @@
+{% extends 'base.html'%}
+
 {% load static %}
 
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Aquacultura Integrada</title>
+{% block content %}
 
-		<link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
-
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
-		<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
-		<meta name="author" content="FREEHTML5.CO" />
+<!-- SLIDESHOW -->
 
 
-	  	<!-- Facebook and Twitter integration -->
-		<meta property="og:title" content=""/>
-		<meta property="og:image" content=""/>
-		<meta property="og:url" content=""/>
-		<meta property="og:site_name" content=""/>
-		<meta property="og:description" content=""/>
-		<meta name="twitter:title" content="" />
-		<meta name="twitter:image" content="" />
-		<meta name="twitter:url" content="" />
-		<meta name="twitter:card" content="" />
-
-		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-		<link rel="shortcut icon" href="favicon.ico">
-
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-		
-		<!-- Animate.css -->
-		<link rel="stylesheet" href="{% static 'css/animate.css' %}">
-		<!-- Icomoon Icon Fonts-->
-		<link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
-		<!-- Bootstrap  -->
-		<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
-		<!-- Owl Carousel -->
-		<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
-		<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
-
-		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<div id="slideshow" class="owl-carousel owl-theme" data-animate-effect="fadeIn">
+	<div class="item"><img src="{% static 'images/mar.jpg' %}" alt="image"></div>
+	<div class="item"><img src="{% static 'images/img_large_2.jpg' %}" alt="image"></div>
+	<div class="item"><img src="{% static 'images/img_large_3.jpg' %}" alt="image"></div>
+	<div class="item"><img src="{% static 'images/img_large_4.jpg' %}" alt="image"></div>
+	<div class="item"><img src="{% static 'images/img_large_5.jpg' %}" alt="image"></div>
+</div>
+<!-- FIM DO SLIDESHOW -->
 
 
-		<!-- Modernizr JS -->
-		<script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
-		<!-- FOR IE9 below -->
-		<!--[if lt IE 9]>
-		<script src="js/respond.min.js"></script>
-		<![endif]-->
-
-
-
-	 			<!-- MENU -->
-	</head>
-	<body>
-	<div class="box-wrap">
-		<header role="banner" id="fh5co-header">
-			<nav class="navbar navbar-default" id="mainnav">
-				<div class="container">
-					<div class="row" style="margin-top:-5px">
-						<div class="col-md-4" align="center">
-							<div class="fh5co-navbar-brand">
-								<a class="fh5co-logo" id="logo1" href="index.html">AQUACULTURA </a> 
-								<a class="fh5co-logo" id="logo2" href="{% url 'home:index' %}"> INTEGRADA </a> 
-							</div>
-						</div>
-
-						<div class="navbar-header">
-						    <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-						        <span class="icon-bar"></span>
-						        <span class="icon-bar"></span>
-						        <span class="icon-bar"></span>
-						    </a>
-						</div>
-
-						<div class="col-md-8 main-nav navbar-collapse collapse">
-							<ul class="nav text-right">
-								<li class="active"><a href="{% url 'home:index' %}" class="scroll-link"><span>Home</span></a></li>
-								<li><a href="#gtco-team" class="scroll-link">Equipe</a></li>
-								<li><a href="#fh5co-product-section" class="scroll-link">Portfólio</a></li>
-								<li><a href="{% url 'home:service' %}">Serviços</a></li>
-								<li><a href="{% url 'home:contact' %}">Contato</a></li>
-								<li><a href="{% url 'blog:home' %}">Blog</a></li>
-							</ul>
-						</div>
-					</div> 
-		    	</div>
-			</nav>
-		</header>
-
-		<!-- FIM DO MENU -->
-
-		<!-- SLIDESHOW -->
-		
-		<div class="owl-carousel owl-carousel1 owl-carousel-fullwidth fh5co-light-arrow animate-box" data-animate-effect="fadeIn">
-			<div class="item"><img src="{% static 'images/mar.jpg' %}" alt="image"></div>
-			<div class="item"><img src="{% static 'images/img_large_2.jpg' %}" alt="image"></div>
-			<div class="item"><img src="{% static 'images/img_large_3.jpg' %}" alt="image"></div>
-			<div class="item"><img src="{% static 'images/img_large_4.jpg' %}" alt="image"></div>
-			<div class="item"><img src="{% static 'images/img_large_5.jpg' %}" alt="image"></div>
+<!-- QUEM SOMOS -->
+<div id="padding-quemsomos" class="fh5co-grey-section divs">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+				<h3>QUEM SOMOS?</h3>
+				<p>Aquacultura Integrada LTDA é uma empresa de produção e serviços de consultoria em aquicultura, tendo uma fazenda de cultivo intensivo de camarão Litopenaeus vannamei e de tilápia Oreochromis niloticus que está em fase de implantação. A empresa conta ainda com 2 áreas licenciadas para a realização de testes de insumos e produtos.
+				</p>
+			</div>
 		</div>
-			<!-- FIM DO SLIDESHOW -->
-
-
-			<!-- QUEM SOMOS -->
-		<div id="fh5co-section" class="fh5co-grey-section">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-						<h3>QUEM SOMOS?</h3>
-						<p>Aquacultura Integrada LTDA é uma empresa de produção de camarão e tilápias que também oferece serviços de consultoria técnica na área de aquicultura, com foco voltado especialmente para projetos especiais de cultivo de camarões e peixes (tilápia) em sistemas de alta densidade de estocagem com uso de novas tecnologias.
-						Nossa meta é realizar projetos inovadores com tecnologias atualizadas e testadas na fazenda própria da empresa que se encontra em fase de implantação. O sistema de produção atual é intensivo, bifásico com o uso de água oligohalina de poço artesiano. 
-						</p>
+		<div id="row-quemsomos-1" class="row">
+			<div id="o-que-ofertamos" class="col-md-6 animate-box">
+				<div class="fh5co-inner">
+					<i class="icon-shield"></i>
+					<div id="img-ajuste" class="holder-section">
+						<h3>O QUE OFERTAMOS</h3>
+						<p class="p-quemsomos">A empresa oferece serviços de consultoria técnica voltados para projetos de cultivo de camarões e peixes (tilápia) em sistemas intensivos com uso de novas tecnologias de produção (Bioflocos, RAS, Sistema Asiático e etc.).</p>
 					</div>
 				</div>
-
-				<div class="col-md-4 animate-box">
-					<div class="fh5co-inner">
-						<i class="icon-shield"></i>
-						<div class="holder-section">
-							<h3>RACEWAY</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 animate-box">
-					<div class="fh5co-inner">
-						<i class="icon-strategy"></i>
-						<div class="holder-section">
-							<h3>VIVEIROS DE CULTIVO</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 animate-box">
-					<div class="fh5co-inner">
-						<i class="icon-bike"></i>
-						<div class="holder-section">
-							<h3>BACIAS DE TRATAMENTO</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-						</div>
+			</div>
+			<div id="nossa-meta" class="col-md-6 animate-box">
+				<div class="fh5co-inner">
+					<i class="icon-strategy"></i>
+					<div id="img-ajuste" class="holder-section">
+						<h3>NOSSA META</h3>
+						<p class="p-quemsomos">Nossa meta é produzir camarões e tilápias com uso eficiente da água, dos insumos e de energia, promovendo o desenvolvimento sustentável da atividade, e atendendo nossos clientes com soluções de projetos inovadores.</p>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- FIM DO QUEM SOMOS -->
-
-		<!-- EQUIPE -->
-		<div id="gtco-team" class="gtco-section">
-			<div class="gtco-container">
-				<div class="row animate-box">
-					<div id="equipe_titulo" class="col-md-8 col-md-offset-2 text-center heading-section">
-						<h3>Nossa Equipe</h3>
-					</div>
-				</div>
-				<div id="equipe_fotos" class="owl-carousel owl-carousel2 row">
-					{% for team in teams %}
-					<div class="col-md-12 animate-box" data-animate-effect="fadeIn">
-						<div class=" item gtco-staff">
-							<img id="equipe" class="btn btn-primary" data-toggle="modal" data-target="#myModal{{ team.slug }}" src="{{ team.image.url }}" alt="{{ team.name }}" >
-							<h3>{{team.name}}</h3>
-							<strong class="role">{{team.job}}</strong>
-							<ul class="gtco-social-icons">
-								<li><a href="#"><i class="icon-facebook"></i></a></li>
-								<li><a href="#"><i class="icon-twitter"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					{% endfor %}
-				</div>
-			</div>
-		</div>
-		<!-- FIM DA EQUIPE -->
-
-
-		<!-- PORTFÓLIO -->
-		<div id="fh5co-product-section" class="fh5co-grey-section">
-			<div class="container">
-				<div class="row">
-					<br>
-					<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-						<h3>PORTFÓLIO</h3>
-						<p>Lorem Ipsum Lorem Lorem Lorem Lorem</p>
-					</div>
-				</div>
-
-				<div class="owl-carousel owl-carousel2" id="portifolio">
-					{% for item in portifolios %}
+		<div class="row">
+			<div id="img-raceway" class="col-md-4 animate-box">
+				<div class="fh5co-inner">
 					<div class="content">
 						<div class="item animate-box">
-							<a href="{{ item.image.url }}" class="image-popup">
-								<img src="{{ item.image.url }}" alt="image">
-								<div class="overlay">
-									<div class="text">{{ item.description }}</div>
-								</div>
-  							</a>
-  						</div>
+							<a href="{% static 'images/product-1.jpg' %}" class="image-popup"><img class="img-quemsomos" src="{% static 'images/portifolio1.jpg' %}" alt="image">
+								<div class="overlay overlay-quemsomos">
+	    						<div class="text">Raceway</div>
+	  							</div>
+	  						</a>
+	  					</div>
   					</div>
-  					{% endfor %}
+				</div>
+			</div>
+			<div id="img-viveiro" class="col-md-4 animate-box">
+				<div class="fh5co-inner">
+					<div class="content">
+						<div class="item animate-box">
+							<a href="{% static 'images/product-1.jpg' %}" class="image-popup"><img class="img-quemsomos" src="{% static 'images/portifolio1.jpg' %}" alt="image">
+								<div class="overlay overlay-quemsomos">
+	    						<div class="text">Viveiros</div>
+	  							</div>
+	  						</a>
+	  					</div>
+  					</div>
+				</div>
+			</div>
+			<div id="img-bacias" class="col-md-4 animate-box">
+				<div class="fh5co-inner">
+					<div class="content">
+						<div class="item animate-box">
+							<a href="{% static 'images/product-1.jpg' %}" class="image-popup"><img class="img-quemsomos" src="{% static 'images/portifolio1.jpg' %}" alt="image">
+								<div class="overlay overlay-quemsomos">
+	    						<div class="text">Bacias</div>
+	  							</div>
+	  						</a>
+	  					</div>
+  					</div>
 				</div>
 			</div>
 		</div>
-		<!-- FIM DO PORTFÓLIO --> 
-		
+	</div>
+</div>
 
-	 	<footer id="footer" class="footer">
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
-                        <div class="main-footer">
+<!-- FIM DO QUEM SOMOS -->
 
-                            <p class="text-center">© 2017 / <a id="eject" target="_blank" href="http://ejectufrn.com.br/">EJECT</a></p>
 
-                            <div class="social">
-								<a href="#"><i class="icon-twitter-with-circle"></i></a>
-								<a href="#"><i class="icon-facebook-with-circle"></i></a>
-								<a href="#"><i class="icon-instagram-with-circle"></i></a>
-							</div>
+<!-- EQUIPE -->
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-     	</footer>
-	
-	
-		<!-- jQuery -->
-		<script src="{% static 'js/jquery.min.js' %}"></script>
-		<!-- jQuery Easing -->
-		<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
-		<!-- Bootstrap -->
-		<script src="{% static 'js/bootstrap.min.js' %}"></script>
-		<!-- Owl carousel -->
-		<script src="{% static 'js/owl.carousel.min.js' %}"></script>
-		<!-- Waypoints -->
-		<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
-		<!-- Parallax Stellar -->
-		<script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+<div id="padding-equipe" class="gtco-section">
+	<div class="gtco-container">
+		<div class="row animate-box">
+			<div id="equipe_titulo" class="col-md-8 col-md-offset-2 text-center heading-section">
+				<h3>Nossa Equipe</h3>
+				<br>
+			</div>
+			<div id="div-equipe">
+				<p id="p-equipe" style="text-align: justify;"> Nossa equipe é atualmente formada por engenheiros de aquicultura, parte da equipe vem atuando na área de aquicultura, especialmente na produção de camarões desde anos 90, também com experiência em produção de tilápia em tanques rede e viveiros escavados. </p>
+			</div>
+		</div>
+		<div id="equipe_fotos" class="owl-carousel owl-carousel2 row">
+			{% for team in teams %}
+			<div class="col-md-12 animate-box" data-animate-effect="fadeIn">
+				<div class=" item gtco-staff">
+					<img id="equipe" class="btn btn-primary" data-toggle="modal" data-target="#myModal{{ team.slug }}" src="{{ team.image.url }}" alt="{{ team.name }}" >
+					<br>
+					<h3>{{team.name}}</h3>
+					<strong class="role">{{team.job}}</strong>
+					<ul class="gtco-social-icons">
+						<li><a href="#"><i class="icon-facebook"></i></a></li>
+						<li><a href="#"><i class="icon-twitter"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
 
-		<!-- Main JS (NÃO REMOVER) -->
-		<script src="{% static 'js/main.js' %}"></script>
+<!-- MODAL PARA CADA MEMBRO CADASTRADO NA EQUIPE -->
 
-	<!-- Modal -->
-		{% for team in teams %}
-		<div class="modal fade" id="myModal{{team.slug}}" role="dialog" style="margin:auto">
-			<div class="modal-dialog modal-sm" id="modal-sm">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">{{ team.name }}</h4>
+{% for team in teams %}
+	<div class="modal fade" id="myModal{{team.slug}}" role="dialog" style="margin:auto">
+		<div class="modal-dialog modal-sm" id="modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">{{ team.name }}</h4>
+				</div>
+				<div class="modal-body">
+					<p> {{team.description|linebreaks}}</p>
+					<div class="owl-carousel owl-carousel1 owl-carousel-fullwidth fh5co-light-arrow animate-box" data-animate-effect="fadeIn">
 					</div>
-					<div class="modal-body">
-						<p> {{team.description|linebreaks}}</p>
-						<div class="owl-carousel owl-carousel1 owl-carousel-fullwidth fh5co-light-arrow animate-box" data-animate-effect="fadeIn">
-						<!--	<div class="item"><img src="{% static 'images/mar.jpg' %}" alt="image"></div>
-							<div class="item"><img src="{% static 'images/img_large_2.jpg' %}" alt="image"></div>
-							<div class="item"><img src="{% static 'images/img_large_3.jpg' %}" alt="image"></div>
-							<div class="item"><img src="{% static 'images/img_large_4.jpg' %}" alt="image"></div>
-							<div class="item"><img src="{% static 'images/img_large_5.jpg' %}" alt="image"></div>-->
-						</div>
-						<div class="modal-footer">
-						    <button class="btn btn-default" data-dismiss="modal">Fechar</button>
-						</div>
+					<div class="modal-footer">
+					    <button class="btn btn-default" data-dismiss="modal">Fechar</button>
 					</div>
 				</div>
 			</div>
 		</div>
-		{% endfor %}
+	</div>
+{% endfor %}
 
-		<script type="text/javascript">
+<!-- FIM DO MODAL -->
 
-			$(document).ready(function(){
-			    var speed = 800;
+<!-- FIM DA EQUIPE -->
 
-			    // check for hash and if div exist... scroll to div
-			    var hash = window.location.hash;
-			    if($(hash).length) scrollToID(hash, speed); 
+<!-- PORTFÓLIO -->
+<div id="padding-portifolio" class="fh5co-grey-section divs">
+	<div class="container" >
+		<div class="row">
+			<br>
+			<div class="col-md-11 text-center heading-section" style="margin-left: 5%;">
+				<h3>PORTFÓLIO</h3>
+				<p>A equipe técnica da empresa vem atuando na elaboração e implantação de projetos de fazendas de camarão desde 2000 e de tilápia desde 2004, a partir de 2012, a equipe vem se especializando em sistemas intensivos, tendo participado de vários cursos no Brasil e no exterior.</p>
+			</div>
+		</div>
 
-			    // scroll to div on nav click
-			    $('.scroll-link').click(function (e) {
-			        e.preventDefault();
-			        var id = $(this).attr('href');
-			        if($(id ).length) scrollToID(id, speed);
-			    });
-			})
+		<div class="owl-carousel owl-carousel2" id="portifolio">
+			{% for item in portifolios %}
+			<div class="content">
+				<div class="item">
+					<a href="{{ item.image.url }}" class="image-popup">
+						<img src="{{ item.image.url }}" alt="image">
+						<div class="overlay">
+							<div class="text">{{ item.description }}</div>
+						</div>
+						</a>
+					</div>
+				</div>
+				{% endfor %}
+		</div>
+	</div>
+</div>
 
-			function scrollToID(id, speed) {
-			    var offSet = 70;
-			    var obj = $(id).offset();
-			    var targetOffset = obj.top - offSet;
-			    $('html,body').animate({ scrollTop: targetOffset }, speed);
-			}
 
-			jQuery(document).ready(function($) {
-			  $(".owl-carousel").each(function(index, el) {
-			    var containerHeight = $(el).height();
-			    $(el).find("img").each(function(index, img) {
-			      var w = $(img).prop('naturalWidth');
-			      var h = $(img).prop('naturalHeight');
-			      $(img).css({
-			        'width': Math.round(containerHeight * w / h) + 'px',
-			        'height': containerHeight + 'px'
-			      });
-			    }),
-			    $(el).owlCarousel({
-			      autoWidth: true
-			    });
-			  });
-			});
+<!-- MODAL DE INSCRIÇÃO -->
 
-			$(document).ready(function() {
-			  var navpos = $('#mainnav').offset();
-			  console.log(navpos.top);
-				$(window).bind('scroll', function() {
-				  if ($(window).scrollTop() > navpos.top) {
-				   $('#mainnav').addClass('navbar-fixed-top');
-				   }
-				   else {
-					 $('#mainnav').removeClass('navbar-fixed-top');
-				   }
-				});
-			});
-		</script>
-	</body>
-</html>
+<div class="modal fade" id="myModal4" role="dialog" displayed="false">
+	<div class="modal-dialog modal-sm" id="modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">ENTRE EM CONTATO</h4>
+			</div>
+			<div class="modal-body">
+				<form method="POST" action="" >
+					{% if is_valid %}
+						<script type="text/javascript">
+	                       alert("Inscrição realizada com sucesso. A Aquacultura Integrada agradece.");
+	                    </script>	
+                    {% endif %}
+					{% csrf_token %}
+                    {% for field in form %}
+                    	{% if field.label == 'Nome' %}
+                    	<label style="margin-right: 10px">{{ field.label}}:</label>	
+                      	{{ field }}
+                      	{% else %}
+                      	<label style="margin-right: 5px">{{ field.label}}:</label>	
+                      	{{ field }}
+                      	{% endif %}
+                      	<br>
+                    {% endfor %}
+					<div class="modal-footer">
+					    <button type="submit" class="btn btn-default" value="submit">Inscrever-se</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
 
+<!-- FIM DO MODAL DE INSCRIÇÃO -->
+
+{% endblock %}

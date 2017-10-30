@@ -1081,14 +1081,6 @@ a[href="#top"]:hover{
   color: #0090cd;
 }
 
-#myModal4 .modal-dialog{
-        overflow-y: initial !important
-}
-#myModal4 .modal-body{
-        height: 250px;
-        overflow-y: auto;
-}
-
 
 
 
