@@ -45,7 +45,7 @@ class Service(models.Model):
 class Portifolio(models.Model):
     name = models.CharField('Nome', max_length=100)
     slug = models.SlugField('Atalho')
-    description = models.TextField('Descrição ', blank = True)
+    description = models.TextField('Descrição ', max_length=100, blank = True)
     image = models.ImageField(upload_to='team/images', verbose_name="Imagem", null=True, blank=True)
     prepopulated_fields = {'slug': ['name']}
 
