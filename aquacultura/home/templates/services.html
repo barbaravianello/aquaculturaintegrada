@@ -43,8 +43,8 @@
 		<!-- Bootstrap  -->
 		<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
 		<!-- Owl Carousel -->
-		<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
-		<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+		<link rel="stylesheet" href="{% static 'css/owl.theme.default.css' %}">
 
 		<link rel="stylesheet" href="{% static 'css/style.css' %}">
 
@@ -56,11 +56,24 @@
 		<script src="js/respond.min.js"></script>
 		<![endif]-->
 
-
-
 	 			<!-- MENU -->
 	</head>
 	<body>
+	<!-- CONTATO NO TOPO -->
+	<div style="height:30px;display:inline-flex;width:100%;background-color:#ffffff;">
+        <div style="width:initial;margin:auto;height: 100%;display: inherit;">
+
+            <div style="height:100%;padding:5px;margin:0 5px;display:inherit;">
+                <img style="height: 100%;margin:0 5px;" src="{% static 'images/telephone.png' %}"><p style="color:#4b63ab;font-size: 13px">(84) 9 9999-0000 </p>
+            </div>
+
+            <div style="height:100%;padding:5px;margin:0 5px;display:inherit;">
+                <img style="height: 100%;margin:0 5px;" src="{% static 'images/whatsapp.png' %}"><p style="color:#4b63ab; font-size: 13px">(84) 9 9999-0000</p>
+            </div>
+        </div>
+    </div>
+	<!-- FIM DO CONTATO -->
+		
 	<div class="box-wrap">
 		<header role="banner" id="fh5co-header">
 			<nav class="navbar navbar-default" id="mainnav">
@@ -94,16 +107,16 @@
 			</nav>
 		</header>
 
-			<!-- FIM DO MENU -->
+		<!-- FIM DO MENU -->
 
 		<div id="fh5co-intro-section" class="section-overlay animate-box" data-animate-effect="fadeIn">
-			<div class="fh5co-intro-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url(../images/mar.jpg);>
+			<div class="fh5co-intro-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url({% static 'images/mar.jpg' %});">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 float-overlay">
-							<h2>Our Services</h2>
-							<h3>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</h3>
-							{% fontawesome_icon 'user' color='gray' %}
+							<h2>NOSSOS SERVIÇOS</h2>
+							<h3>Conheça nossos serviços.</h3>
+							{% fontawesome_icon 'user' color='transparent' %}
 						</div>
 					</div>
 				</div>
