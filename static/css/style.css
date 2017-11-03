@@ -1056,19 +1056,129 @@ form label {
   width: 60% !important;
 }
 
-#img-raceway {
-  padding-left: 7% !important;
-  padding-right: 0% !important;
+
+/* Telefones em paisagem e abaixo */
+@media (max-width: 480px) { 
+    #img-raceway {
+      padding-left: 10% !important;
+      padding-right: 0% !important;
+      width: 40%
+    }
+
+    #img-viveiro {
+      padding-left: 0% !important;
+      padding-right: 0% !important;
+      width: 30%;
+    }
+
+    #img-bacias {
+      padding-left: 0% !important;
+      padding-right: 0% !important;
+      width: 30%;
+    }
+ }
+ 
+/* Telefones em paisagem a tablet em retrato */
+@media (max-width: 767px) {
+    #img-raceway {
+      padding-left: 30% !important;
+      padding-right: 0% !important;
+      width: 90%
+    }
+
+    #img-viveiro {
+      padding-left: 30% !important;
+      padding-right: 0% !important;
+      width: 90%;
+    }
+
+    #img-bacias {
+      padding-left: 30% !important;
+      padding-right: 0% !important;
+      width: 90%;
+    }
+}
+ 
+/* Tablet em retrato a paisagem e desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+    #img-raceway {
+      padding-left: 30% !important;
+      padding-right: 0% !important;
+      width: 90%
+    }
+
+    #img-viveiro {
+      padding-left: 30% !important;
+      padding-right: 0% !important;
+      width: 90%;
+    }
+
+    #img-bacias {
+      padding-left: 30% !important;
+      padding-right: 0% !important;
+      width: 90%;
+    }
 }
 
-#img-viveiro {
-  padding-left: 0% !important;
-  padding-right: 0% !important;
+@media (min-width: 979px) and (max-width: 991px) {
+    #img-raceway {
+      padding-left: 30% !important;
+      padding-right: 0% !important;
+      width: 90%
+    }
+
+    #img-viveiro {
+      padding-left: 30% !important;
+      padding-right: 0% !important;
+      width: 90%;
+    }
+
+    #img-bacias {
+      padding-left: 30% !important;
+      padding-right: 0% !important;
+      width: 90%;
+    }
 }
 
-#img-bacias {
-  padding-left: 0% !important;
-  padding-right: 7% !important;
+@media (min-width: 992px) and (max-width: 1200px) {
+    #img-raceway {
+      padding-left: 10% !important;
+      padding-right: 0% !important;
+      width: 40%
+    }
+
+    #img-viveiro {
+      padding-left: 0% !important;
+      padding-right: 0% !important;
+      width: 30%;
+    }
+
+    #img-bacias {
+      padding-left: 0% !important;
+      padding-right: 0% !important;
+      width: 30%;
+    }
+}
+ 
+/* Desktop grande */
+@media (min-width: 1200px) {
+    #img-raceway {
+      padding-left: 10% !important;
+      padding-right: 0% !important;
+      width: 40%
+    }
+
+    #img-viveiro {
+      padding-left: 0% !important;
+      padding-right: 0% !important;
+      width: 30%;
+    }
+
+    #img-bacias {
+      padding-left: 0% !important;
+      padding-right: 0% !important;
+      width: 30%;
+    }
 }
 
 a[href="#top"]{

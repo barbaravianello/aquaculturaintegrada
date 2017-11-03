@@ -148,7 +148,7 @@
 
 		<!-- Main JS (NÃO REMOVER) -->
 		<script src="{% static 'js/main.js' %}"></script>
-
+		<script src="{% static 'js/owl.autoplay.js' %}"></script>
 
 
 		<script type="text/javascript">
@@ -234,29 +234,37 @@
 
 			$("#slideshow").owlCarousel({
 		        navigation : true, // Show next and prev buttons
-		        slideSpeed : 300,
-		        paginationSpeed : 400,
-		        items:1
-
+		        slideSpeed :100,
+		        paginationSpeed : 3000,
+		        items:1,
+		        autoplay: true,
+				autoplayTimeout: 8000,
+				loop: true
 		    });
 
 			$('.owl-carousel').owlCarousel({
 			    loop:true,
 			    margin:10,
 			    nav:true,
+			    autoplay: true,
+				autoplayTimeout: 8000,
+				autoplayHoverPause: true,
 			    responsive:{
 			        0:{
 			            items:1
 			        },
 			        600:{
-			            items:3
+			            items:2
 			        },
 			        1000:{
-			            items:3
+			            items:2
 			        }
 			    }
 
 			});
+
+			
+
 
 		</script>
 	</body>
