@@ -1007,7 +1007,7 @@ form label {
 }
 
 #padding-equipe {
-  padding-top: 3% !important;
+  padding-top: 7% !important;
   padding-bottom: 0% !important;
   clear: both;
 }
@@ -1055,6 +1055,7 @@ form label {
   height: 100% !important;
   width: 60% !important;
 }
+
 
 /* Telefones em paisagem e abaixo */
 @media (max-width: 480px) { 
