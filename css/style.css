@@ -1000,6 +1000,11 @@ form label {
   padding-bottom: 5% !important;
 }
 
+#padding-logo {
+  padding-top: 8% !important;
+  padding-bottom: 5% !important;
+}
+
 #padding-equipe {
   padding-top: 7% !important;
   padding-bottom: 0% !important;
@@ -1024,6 +1029,9 @@ form label {
 .p-quemsomos{
   margin-right: 15%; 
 }
+.p-logo{
+  margin-right: 15%; 
+}
 
 #img-ajuste{
   padding-left: 4em;
@@ -1040,9 +1048,15 @@ form label {
 #row-quemsomos-1 {
   margin-bottom: 5%;
 }
+#row-logo {
+  margin-bottom: 5%;
+}
 
 .img-quemsomos {
   width: 60% !important;
+}
+.img-logo{
+  width: 30% !important;
 }
 
 .overlay-quemsomos{
@@ -1080,9 +1094,6 @@ a[href="#top"]:hover{
 #volta-ao-topo{
   color: #0090cd;
 }
-
-
-
 
 
 

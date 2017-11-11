@@ -4487,6 +4487,7 @@ tbody.collapse.in {
 .nav {
   margin-bottom: 0;
   padding-left: 0;
+  padding-top: 2%;
   list-style: none;
 }
 .nav:before, .nav:after {
