@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Team, Service, Portifolio, PortifolioImage
+from .models import Team, Service, Portfolio, PortfolioImage
 
 
 class TeamAdmin(admin.ModelAdmin):
@@ -15,17 +15,17 @@ class ServiceAdmin(admin.ModelAdmin):
 	search_fields = ['name', 'slug']
 	prepopulated_fields = {'slug': ['name']}
 
-class PortifolioImageInline(admin.TabularInline):
-    model = PortifolioImage
+class PortfolioImageInline(admin.TabularInline):
+    model = PortfolioImage
     extra = 0
 
-class PortifolioAdmin(admin.ModelAdmin):
+class PortfolioAdmin(admin.ModelAdmin):
 	list_display = ['name', 'slug']
 	search_fields = ['name', 'slug']
 	prepopulated_fields = {'slug': ['name']}
-	inlines = [PortifolioImageInline,]
+	inlines = [PortfolioImageInline,]
 
 admin.site.register(Team, TeamAdmin)
 admin.site.register(Service, ServiceAdmin)
-admin.site.register(Portifolio, PortifolioAdmin)
+admin.site.register(Portfolio, PortfolioAdmin)
 

@@ -1,17 +1,17 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .forms import LeadForm
 from django.contrib import messages
-from home.models import Team, Service, Portifolio, PortifolioImage
+from home.models import Team, Service, Portfolio, PortfolioImage
 from home.forms import ContactAquacultura
+
 
 def index(request):
 	teams = Team.objects.all()
-	portifolios = Portifolio.objects.all()
-	portifolio_images = PortifolioImage.objects.all()
+	portfolios = Portfolio.objects.all()
+	
 	context = {
 		'teams': teams,
-		'portifolios': portifolios,
-		'portifolio_images': portifolio_images,
+		'portfolios': portfolios,
 	}
 	if request.method == 'POST':
 		form = LeadForm(request.POST)
@@ -25,12 +25,14 @@ def index(request):
 	context['form'] = form
 	return render(request, "index.html", context)
 
+
 def service(request):
 	services = Service.objects.all()
 	context = {
 		'services': services,
 	}
 	return render(request, "services.html", context)
+
 
 def contact(request):
 	context = {}
@@ -45,10 +47,10 @@ def contact(request):
 	context['form'] = form
 	return render(request, "contact.html", context)
 
-def portfolio(request):
-	portfolios = Portifolio.objects.all()
-	portfolio_images = PortifolioImage.objects.all()
-	context = {
-		'portfolios': portfolios,
-	}
-	return render(request, "portfolio.html", context)
+
+def portfolio(request, slug):
+	portfolio = get_object_or_404(Portfolio, slug=slug)
+	context = {}
+	context['portfolio'] = portfolio
+	template_name = 'portfolio.html'
+	return render(request, template_name, context)

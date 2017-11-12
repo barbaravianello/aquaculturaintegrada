@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% load static %}
-{% load fontawesome %}
 	
 {% block content %}
 <header role="banner" id="fh5co-header">
@@ -43,7 +42,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 float-overlay">
-					<h2>{{portifolio.name}}</h2>
+					<h2>{{ portfolio.name }}</h2>
 				</div>
 			</div>
 		</div>
@@ -51,12 +50,12 @@
 </div>
 
 
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-				<p>Aquacultura Integrada LTDA é uma empresa de produção e serviços de consultoria em aquicultura, tendo uma fazenda de cultivo intensivo de camarão <i> Litopenaeus vannamei </i> e de tilápia <i> Oreochromis niloticus </i> que está em fase de implantação. A empresa conta ainda com 2 áreas licenciadas para a realização de testes de insumos e produtos.
-				</p>
-			</div>
-		</div>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+		<p>Aquacultura Integrada LTDA é uma empresa de produção e serviços de consultoria em aquicultura, tendo uma fazenda de cultivo intensivo de camarão <i> Litopenaeus vannamei </i> e de tilápia <i> Oreochromis niloticus </i> que está em fase de implantação. A empresa conta ainda com 2 áreas licenciadas para a realização de testes de insumos e produtos.
+		</p>
+	</div>
+</div>
 
 
 <!-- END fh5co-intro-section -->
@@ -64,7 +63,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
-				{% for service in portfolios %}
+				{% for item in portfolio_images %}
 				<div class="col-md-4 animate-box">
 					<div class="fh5co-inner fh5co-services">
 						<img src="{% static 'images/trator.jpg' %}" style="width: 250px;
