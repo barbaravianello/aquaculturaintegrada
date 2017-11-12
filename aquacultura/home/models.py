@@ -13,10 +13,6 @@ class Team(models.Model):
     def __str__(self):
         return self.name
 
-    @models.permalink
-    def get_absolute_url(self):
-        return ('home:details', (), {'slug': self.slug})
-
     class Meta:
         verbose_name = 'Equipe'
         verbose_name_plural = 'Equipe'
@@ -32,10 +28,6 @@ class Service(models.Model):
 
     def __str__(self):
         return self.name
-
-    @models.permalink
-    def get_absolute_url(self):
-        return ('home:details', (), {'slug': self.slug})
 
     class Meta:
         verbose_name = 'Serviço'

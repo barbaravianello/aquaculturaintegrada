@@ -5,9 +5,9 @@ from django.conf.urls.static import static
 
 urlpatterns = [
 	url(r'^$', views.index, name='index'),
+	url(r'^portfolio$', views.portfolio, name='portfolio'),
 	url(r'^servicos$', views.service, name='service'),
 	url(r'^contato$', views.contact, name='contact'),
-	url(r'^(?P<slug>[\w_-]+)/$', views.portfolio, name='portfolio'),
 ]
 
 if settings.DEBUG:

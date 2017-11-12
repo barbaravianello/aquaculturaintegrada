@@ -48,8 +48,8 @@ def contact(request):
 	return render(request, "contact.html", context)
 
 
-def portfolio(request, slug):
-	portfolio = get_object_or_404(Portfolio, slug=slug)
+def portfolio(request):
+	portfolio = Portfolio.objects.all()
 	context = {}
 	context['portfolio'] = portfolio
 	template_name = 'portfolio.html'
