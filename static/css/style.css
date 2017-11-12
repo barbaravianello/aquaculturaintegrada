@@ -1448,10 +1448,44 @@ color: #0090CA;
   }
 }
 
-#portifolio {
-  width:80%;
-  margin-left:10%;
-  padding: 10px;
+@media screen and (max-width: 480px){
+  #portifolio {
+    width:80%;
+    margin-left:12%;
+    padding: 10px;
+  }
+  .owl-carousel-arrows {
+    margin-top: 30%;
+    vertical-align: middle;
+    position: absolute;
+  }
+
+  #right{
+    margin-top: 30%;
+    vertical-align: middle;
+    position: absolute;
+    margin-left:83%;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 3000px){
+  #portifolio {
+    width:80%;
+    margin-left:10%;
+    padding: 10px;
+  }
+  .owl-carousel-arrows {
+    margin-top: 10%;
+    vertical-align: middle;
+    position: absolute;
+    margin-left: 5%;
+  }
+
+  #right{
+    margin-top: 10%;
+    vertical-align: middle;
+    position: absolute;
+    margin-left:87%;
+  }
 }
 
 /* Owl Override Style */

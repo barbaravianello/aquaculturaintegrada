@@ -394,6 +394,15 @@
 		  transition: .5s ease;
 		  background-color: rgba(38, 45, 66, 0.66);
 		}
+
+		#portfolio {
+			margin-right: 5%;
+			margin-left: 5%;
+		}
+
+		.col-sm-1 {
+			width: 50px;
+		}
 	</style>
 
 
@@ -408,6 +417,16 @@
 				</div>
 			</div>
 
+			<div class="owl-carousel-arrows col-sm-1">
+				<!--<button class="btn prev" color="transparent">-->
+					<i class='icon-chevron-left icon-black'></i>
+				<!--</button>-->
+			</div>
+			<div class="owl-carousel-arrows col-sm-1 next" id="right">
+				<!--<button class="btn prev" color="transparent">-->
+					<i class='icon-chevron-right icon-black'></i>
+					<!--</button>-->
+			</div>
 			<div class="owl-carousel owl-carousel2 owl-loaded owl-drag" id="portifolio">
 				<div class="content">
 					<div class="item hvr-float-shadow">
@@ -440,6 +459,7 @@
 					</div>
 				</div>
 			</div>
+			
 		</div>
 	</div>
 
@@ -621,6 +641,7 @@
 			    loop:true,
 			    margin:10,
 			    nav:true,
+			    navText: ["<i class='icon-chevron-left icon-black'></i>", "<i class='icon-chevron-right icon-black'></i>"],
 			    responsive:{
 			        0:{
 			            items:1
@@ -634,6 +655,27 @@
 			    }
 
 			});
+
+			$(document).ready(function() {
+
+			    var owl = $(".owl-carousel");
+
+			    owl.owlCarousel({
+			        items: 3
+			    });
+
+
+			    // Custom Navigation Events
+
+			    $(".prev").click(function(){
+				    owl.trigger('owl.prev');
+				  })
+			   	$(".next").click(function(){
+				    owl.trigger('owl.next');
+				  })
+
+			});
+
 
 		</script>
 	</body>
