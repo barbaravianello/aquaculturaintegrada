@@ -214,8 +214,9 @@
 						<p id="p-equipe" style="text-align: justify;"> Nossa equipe é atualmente formada por engenheiros de aquicultura, parte da equipe vem atuando na área de aquicultura, especialmente na produção de camarões desde anos 90, também com experiência em produção de tilápia em tanques rede e viveiros escavados. </p>
 					</div>
 				</div>
-				<div id="equipe_fotos" class="owl-carousel owl-carousel2 row">
-					<div class="col-md-12 animate-box" data-animate-effect="fadeIn">
+
+				<div id="carousel-equipe" class="owl-carousel owl-carousel2 row">
+					<div id="equipe_fotos" class="animate-box" data-animate-effect="fadeIn">
 						<div class=" item gtco-staff">
 							<img id="equipe" class="btn btn-primary" data-toggle="modal" data-target="#myModalantonio-de-freitas-bezerra" src="media/team/images/pexels-photo-423364.jpeg" alt="Antônio de Freitas Bezerra">
 							<br>
@@ -227,7 +228,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-md-12 animate-box" data-animate-effect="fadeIn">
+					<div class="animate-box" data-animate-effect="fadeIn">
 						<div class=" item gtco-staff">
 							<img id="equipe" class="btn btn-primary" data-toggle="modal" data-target="#myModalanizio-neto-da-silva" src="media/team/images/pexels-photo-428364.jpeg" alt="Antônio de Freitas Bezerra">
 							<br>
@@ -239,7 +240,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-md-12 animate-box" data-animate-effect="fadeIn">
+					<div class="animate-box" data-animate-effect="fadeIn">
 						<div class=" item gtco-staff">
 							<img id="equipe" class="btn btn-primary" data-toggle="modal" data-target="#myModaljoao-da-silva" src="media/team/images/pexels-photo-428364.jpeg" alt="João da Silva">
 							<br>
@@ -339,7 +340,7 @@
 
 	<style type="text/css">
 	
-			/* Float Shadow */
+		/* Float Shadow - ANIMAÇÃO DO PORTFÓLIO */
 		.hvr-float-shadow {
 		  display: inline-block;
 		  vertical-align: middle;
@@ -418,14 +419,20 @@
 			</div>
 
 			<div class="owl-carousel-arrows col-sm-1">
-				<!--<button class="btn prev" color="transparent">-->
-					<i class='icon-chevron-left icon-black'></i>
-				<!--</button>-->
+				<!-- SETAS DE NAVEGAÇÃO PARA O CARROSSEL -->
+				<nav class="prev"> 
+					<a class="customPrevBtn" href="#">
+						<i class='icon-chevron-left icon-black'></i>
+					</a>
+				</nav>
 			</div>
 			<div class="owl-carousel-arrows col-sm-1 next" id="right">
-				<!--<button class="btn prev" color="transparent">-->
-					<i class='icon-chevron-right icon-black'></i>
-					<!--</button>-->
+				<nav class="next"> 
+					<a class="customNextBtn" href="#">
+						<i class='icon-chevron-right icon-black'></i>
+					</a>
+				</nav>
+				<!-- FIM DA INSERÇÃO DE SETAS DE NAVEGAÇÃO -->
 			</div>
 			<div class="owl-carousel owl-carousel2 owl-loaded owl-drag" id="portifolio">
 				<div class="content">
@@ -626,8 +633,11 @@
 
 			/*------------------- FIM DA NAVBAR FIXA NO TOPO DA PÁGINA ---------------------*/
 
+
+			/*------------------- ESPECIFICAÇÕES DO SLIDESHOW/CARROSSEL ---------------------*/
+
 			$("#slideshow").owlCarousel({
-		        navigation : true, // Show next and prev buttons
+		        navigation : true,
 		        slideSpeed : 200,
 		        paginationSpeed : 300,
 		        items:1,
@@ -637,11 +647,24 @@
 		        loop: true
 		    });
 
+			/*$('#carousel-equipe').owlCarousel({
+				//navigation : true,
+		        //slideSpeed : 200,
+		        //paginationSpeed : 300,
+		        items:2,
+
+				//autoplay: true,
+				//autoplayTimeout: 3000,
+				//autoplayHoverPause: true,
+				//loop:true
+
+			});*/
+
 			$('.owl-carousel').owlCarousel({
 			    loop:true,
 			    margin:10,
 			    nav:true,
-			    navText: ["<i class='icon-chevron-left icon-black'></i>", "<i class='icon-chevron-right icon-black'></i>"],
+			    dots: true,
 			    responsive:{
 			        0:{
 			            items:1
@@ -656,6 +679,13 @@
 
 			});
 
+
+
+			/*------------- FIM DE ESPECIFICAÇÕES DO SLIDESHOW/CARROSSEL ----------------*/
+
+
+			/*------------------- FUNÇÕES PREV/NEXT PARA NAVEGAÇÃO  ---------------------*/
+
 			$(document).ready(function() {
 
 			    var owl = $(".owl-carousel");
@@ -664,18 +694,18 @@
 			        items: 3
 			    });
 
-
-			    // Custom Navigation Events
-
-			    $(".prev").click(function(){
-				    owl.trigger('owl.prev');
-				  })
-			   	$(".next").click(function(){
-				    owl.trigger('owl.next');
-				  })
+			    $('.customNextBtn').click(function (e) {
+				    e.preventDefault();
+				    $(".owl-carousel").trigger('next.owl.carousel');
+				});
+				$('.customPrevBtn').click(function (e) {
+				    e.preventDefault();
+				    $(".owl-carousel").trigger('prev.owl.carousel');
+				});
 
 			});
 
+			/*------------------- FIM DE FUNÇÕES PREV/NEXT PARA NAVEGAÇÃO  ---------------------*/
 
 		</script>
 	</body>
