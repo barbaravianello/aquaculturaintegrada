@@ -45,8 +45,8 @@ class Service(models.Model):
 class Portifolio(models.Model):
     name = models.CharField('Nome', max_length=100)
     slug = models.SlugField('Atalho')
-    description = models.TextField('Descrição ', max_length=100, blank = True)
-    image = models.ImageField(upload_to='team/images', verbose_name="Imagem", null=True, blank=True)
+    main_image = models.ImageField(upload_to='portifolio/images', verbose_name="Imagem", default="{% static'images/port1.png' %}")
+    description = models.TextField('Descrição ', blank = True)
     prepopulated_fields = {'slug': ['name']}
 
     def __str__(self):
@@ -60,3 +60,8 @@ class Portifolio(models.Model):
         verbose_name = 'Portifólio'
         verbose_name_plural = 'Portifólios'
         ordering = ['name']
+
+
+class PortifolioImage(models.Model):
+    title = models.ForeignKey(Portifolio, related_name='images')
+    image = models.ImageField(upload_to='portfolio/images', verbose_name="Imagem")

@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load fontawesome %}
+	
+{% block content %}
+<header role="banner" id="fh5co-header">
+	<nav class="navbar navbar-default" id="mainnav">
+		<div class="container">
+			<div class="row" style="margin-top:-5px">
+				<div class="col-md-4" align="center">
+					<div class="fh5co-navbar-brand">
+						<img style="height: 100%; margin: 0 5px; width: 13%; padding-top: 1%;" src="{% static 'images/logo.png' %}">
+						<a class="fh5co-logo" id="logo1" href="index.html">AQUACULTURA </a> 
+						<a class="fh5co-logo" id="logo2" href="index.html"> INTEGRADA </a> 
+					</div>
+				</div>
+				<div class="navbar-header">
+				    <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				    </a>
+				</div>
+				<div class="col-md-8 main-nav navbar-collapse collapse">
+					<ul class="nav text-right">
+						<li><a href="{% url 'home:index' %}"><span>Home</span></a></li>
+						<li><a href="{% url 'home:index' %}">Equipe</a></li>
+						<li class="active"><a href="{% url 'home:index' %}">Portfólio</a></li>
+						<li><a href="{% url 'home:service' %}">Serviços</a></li>
+						<li><a href="{% url 'home:contact' %}">Contato</a></li>
+						<li><a href="{% url 'blog:home' %}">Blog</a></li>
+					</ul>
+				</div>
+			</div> 
+  		</div>
+	</nav>
+</header>
+
+<!-- FIM DO MENU -->
+
+<div id="fh5co-intro-section" class="section-overlay animate-box" data-animate-effect="fadeIn">
+	<div class="fh5co-intro-cover text-center" data-stellar-background-ratio="0.5" style=" background-image: url({% static 'images/slidecontatos.jpg' %});">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 float-overlay">
+					<h2>{{portifolio.name}}</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+				<p>Aquacultura Integrada LTDA é uma empresa de produção e serviços de consultoria em aquicultura, tendo uma fazenda de cultivo intensivo de camarão <i> Litopenaeus vannamei </i> e de tilápia <i> Oreochromis niloticus </i> que está em fase de implantação. A empresa conta ainda com 2 áreas licenciadas para a realização de testes de insumos e produtos.
+				</p>
+			</div>
+		</div>
+
+
+<!-- END fh5co-intro-section -->
+<div id="fh5co-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				{% for service in portfolios %}
+				<div class="col-md-4 animate-box">
+					<div class="fh5co-inner fh5co-services">
+						<img src="{% static 'images/trator.jpg' %}" style="width: 250px;
+    margin: 2%;">
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>	
+		
+{% endblock content %}

@@ -7,6 +7,7 @@ urlpatterns = [
 	url(r'^$', views.index, name='index'),
 	url(r'^servicos$', views.service, name='service'),
 	url(r'^contato$', views.contact, name='contact'),
+	url(r'^portfolio$', views.portfolio, name='portfolio'),
 ]
 
 if settings.DEBUG:

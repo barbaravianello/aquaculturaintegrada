@@ -1,15 +1,17 @@
 from django.shortcuts import render
 from .forms import LeadForm
 from django.contrib import messages
-from home.models import Team, Service, Portifolio
+from home.models import Team, Service, Portifolio, PortifolioImage
 from home.forms import ContactAquacultura
 
 def index(request):
 	teams = Team.objects.all()
 	portifolios = Portifolio.objects.all()
+	portifolio_images = PortifolioImage.objects.all()
 	context = {
 		'teams': teams,
 		'portifolios': portifolios,
+		'portifolio_images': portifolio_images,
 	}
 	if request.method == 'POST':
 		form = LeadForm(request.POST)
@@ -42,3 +44,11 @@ def contact(request):
 		form = ContactAquacultura()
 	context['form'] = form
 	return render(request, "contact.html", context)
+
+def portfolio(request):
+	portfolios = Portifolio.objects.all()
+	portfolio_images = PortifolioImage.objects.all()
+	context = {
+		'portfolios': portfolios,
+	}
+	return render(request, "portfolio.html", context)
