@@ -73,7 +73,7 @@
 					<img src="{% static 'images/Imagem1.png' %}" style="position: absolute; top: 20%; left: 0;font-size: 60px;">
 					<div id="img-ajuste" class="holder-section">
 						<h3>O QUE OFERTAMOS</h3>
-						<p class="p-quemsomos">Serviços de consultoria técnica voltados para projetos de cultivo de camarões e peixes (tilápia) em sistemas semi-intensivo e intensivo com uso de novas tecnologias de produção.</p>
+						<p class="p-quemsomos" style="font-size: 17px;">Serviços de consultoria técnica voltados para projetos de cultivo de camarões e peixes (tilápia) em sistemas semi-intensivo e intensivo com uso de novas tecnologias de produção.</p>
 						<a class="btn2" href="{% url 'home:service' %}">CONHEÇA NOSSOS SERVIÇOS </a>
 					</div>
 				</div>
@@ -83,7 +83,7 @@
 					<img src="{% static 'images/Imagem2.png' %}" style="position: absolute; top: 20%; left: 0;font-size: 60px;">
 					<div id="img-ajuste" class="holder-section">
 						<h3>NOSSA META</h3>
-						<p class="p-quemsomos">Nossa meta é produzir camarões e tilápias com uso eficiente da água, dos insumos e de energia, promovendo o desenvolvimento sustentável da atividade, e atendendo nossos clientes com soluções de projetos inovadores.</p>
+						<p class="p-quemsomos" style="font-size: 17px;">Nossa meta é produzir camarões e tilápias com uso eficiente da água, dos insumos e de energia, promovendo o desenvolvimento sustentável da atividade, e atendendo nossos clientes com soluções de projetos inovadores.</p>
 					</div>
 				</div>
 			</div>
@@ -135,16 +135,6 @@
 					</a>
 				</div>
 			</div>
-			<div class="content">
-				<div class="item hvr-float-shadow">
-					<a href="{% static 'images/Licenciamento_ Tilapia 2.jpg' %}" class="image-popup">
-					<img src="{% static 'images/Licenciamento_ Tilapia 2.jpg' %}" alt="image" style="max-width: 339px;">
-					<div class="overlay">
-						<div class="text">Licenciamento</div>
-					</div>
-					</a>
-				</div>
-			</div>
 		</div>
 	</div>
 </div>
@@ -165,6 +155,7 @@
 				<p id="p-equipe" style="text-align: justify;"> Nossa equipe é atualmente formada por engenheiros de aquicultura, parte dela vem atuando na área de aquicultura, especialmente na produção de camarões desde anos 90, também com experiência em produção de tilápia em tanques rede e viveiros escavados. </p>
 			</div>
 		</div>
+
 		<div id="equipe_fotos" class="owl-carousel owl-carousel2 row">
 			{% for team in teams %}
 			<div class="col-md-12 animate-box" data-animate-effect="fadeIn">
@@ -173,10 +164,7 @@
 					<br>
 					<h3>{{team.name}}</h3>
 					<strong class="role">{{team.job}}</strong>
-					<ul class="gtco-social-icons">
-						<li><a href="#"><i class="icon-facebook"></i></a></li>
-						<li><a href="#"><i class="icon-twitter"></i></a></li>
-					</ul>
+					<br>
 				</div>
 			</div>
 			{% endfor %}
@@ -245,7 +233,7 @@
 			{% for item in port %}
 			<div class="content">
 				<div class="item hvr-float-shadow" data-toggle="modal" data-target="#modalPortfolio{{item.slug}}" >
-					<img src="{{ item.main_image.url }}" alt="image" id="grow" style="max-width:300px;">
+					<img src="{{ item.main_image.url }}" alt="image" id="grow" style="max-width: 300px;">
 					<div class="overlay">
 						<div class="text">{{ item.title}}</div>
 					</div>
@@ -253,6 +241,10 @@
 			</div>
 			{% endfor %}
 		</div>
+	</div>
+	<div class="col-sm-12 text-center">
+		<br>
+		<a href="{% url 'blog:home' %}"><button class="btn btn-default">Confira nossas últimas notícias!</button></a>
 	</div>
 </div>
 
@@ -376,9 +368,9 @@
 
 								<div class="col-md-8 main-nav navbar-collapse collapse">
 									<ul class="nav text-right">
-										<li class="active"><a href="{% url 'home:index' %}" class="scroll-link"><span>Home</span></a></li>
-										<li><a href="{% url 'home:index' %}" class="scroll-link">Equipe</a></li>
-										<li><a href="{% url 'home:index' %}" class="scroll-link">Portfólio</a></li>
+										<li class="active"><a href="{% url 'home:index' %}"><span>Home</span></a></li>
+										<li><a href="{% url 'home:index' %}">Equipe</a></li>
+										<li><a href="{% url 'home:index' %}">Portfólio</a></li>
 										<li><a href="{% url 'home:service' %}">Serviços</a></li>
 										<li><a href="{% url 'home:contact' %}">Contato</a></li>
 										<li><a href="{% url 'blog:home' %}">Blog</a></li>
@@ -415,7 +407,7 @@
 			</div>
 			<div class="modal-body2">
 				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center heading-section">
+					<div class="col-md-8 col-md-offset-2 text-center heading-section" style="padding-left: 30px; padding-right: 30px;">
 						<p>{{item.description|linebreaks}}</p>
 					</div>
 				</div>
@@ -504,6 +496,11 @@
 	  opacity: 0;
 	  transition: .5s ease;
 	  background-color: rgba(38, 45, 66, 0.66);
+	}
+
+	.btn-default {
+		background-color: #4b63ab;
+    	color: white;
 	}
 </style>
 

@@ -1028,7 +1028,8 @@ form label {
 }
 
 .p-quemsomos{
-  margin-right: 15%; 
+  margin-right: 15%;
+  font-size: 17px; 
 }
 
 #img-ajuste{
@@ -1345,7 +1346,12 @@ color: #0090CA;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
 
+@media screen and (min-width: 319px) and (max-width: 321px){
+  #fh5co-header .fh5co-navbar-brand .fh5co-logo {
+    font-size: 10px;
+  }
 }
 
 #logo1{
