@@ -59,7 +59,7 @@
 				{% for service in services %}
 				<div class="col-md-6 animate-box">
 					<div class="fh5co-inner fh5co-services">
-						{{ service.icon.as_html }}
+						<img src="{{ service.icon.url }}">
 						<div class="holder-section">
 							<h3>{{ service.name }}</h3>
 							<p>{{ service.description}}</p>

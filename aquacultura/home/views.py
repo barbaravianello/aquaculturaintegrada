@@ -1,17 +1,17 @@
 from django.shortcuts import render, get_object_or_404
 from .forms import LeadForm
 from django.contrib import messages
-from home.models import Team, Service, Portfolio, PortfolioImage, Gallery
+from home.models import Team, Service, Portfolio, PortfolioImage
 from home.forms import ContactAquacultura
 
 def index(request):
 	teams = Team.objects.all()
-	galleries = Gallery.objects.all()
 	port = Portfolio.objects.all()
+	images = PortfolioImage.objects.all()
 	context = {
 		'teams': teams,
-		'galleries': galleries,
 		'port': port,
+		'images': images,
 	}
 	if request.method == 'POST':
 		form = LeadForm(request.POST)
@@ -53,22 +53,3 @@ def contact(request):
 	context['form'] = form
 	return render(request, "contact.html", context)
 
-
-def details(request, slug):
-	portfolio = get_object_or_404(Portfolio, slug=slug)
-	context = {}
-#	if request.method == 'POST':
-#		form = ContactCourse(request.POST)
-#		if form.is_valid():
-#			context['is_valid'] = True
-#			print(form.cleaned_data['name'])
-#			print(form.cleaned_data['email'])
-#			print(form.cleaned_data['message'])
-#			form.send_mail(course)
-#			form =  ContactCourse()
-#	else:
-#		form = ContactCourse()
-#	context['form'] = form
-	context['portfolio'] = portfolio
-	template_name = 'portfolio.html'
-	return render(request, template_name, context)

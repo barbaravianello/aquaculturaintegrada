@@ -8,7 +8,6 @@ urlpatterns = [
 	url(r'^servicos$', views.service, name='service'),
 	url(r'^contato$', views.contact, name='contact'),
 	url(r'^portfolio$', views.galeria, name='galeria'),
-	url(r'^(?P<slug>[\w\-]+)/$', views.details, name='details'),
 ]
 
 if settings.DEBUG:

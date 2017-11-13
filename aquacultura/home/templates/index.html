@@ -169,25 +169,28 @@
 <!-- MODAL PARA CADA MEMBRO CADASTRADO NA EQUIPE -->
 
 {% for team in teams %}
-	<div class="modal fade" id="myModal{{team.slug}}" role="dialog" style="margin:auto">
-		<div class="modal-dialog modal-sm" id="modal-sm">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">{{ team.name }}</h4>
+
+<div class="modal fade" id="myModal{{team.slug}}" role="dialog" style="margin:auto">
+	<div class="modal-dialog modal-sm" id="modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">{{ team.name }}</h4>
+			</div>
+			<div class="modal-body">
+				<p> {{team.description|linebreaks}}</p>
+				<div class="owl-carousel owl-carousel1 owl-carousel-fullwidth fh5co-light-arrow animate-box" data-animate-effect="fadeIn">
 				</div>
-				<div class="modal-body">
-					<p> {{team.description|linebreaks}}</p>
-					<div class="owl-carousel owl-carousel1 owl-carousel-fullwidth fh5co-light-arrow animate-box" data-animate-effect="fadeIn">
-					</div>
-					<div class="modal-footer">
-					    <button class="btn btn-default" data-dismiss="modal">Fechar</button>
-					</div>
+				<div class="modal-footer">
+				    <button class="btn btn-default" data-dismiss="modal">Fechar</button>
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
+
 {% endfor %}
+
 
 <!-- FIM DO MODAL -->
 
@@ -207,54 +210,10 @@
 		<div class="owl-carousel owl-carousel2" id="portifolio">
 			{% for item in port %}
 			<div class="content">
-				<div class="item hvr-float-shadow" >
-					<img src="{{ item.main_image.url }}" alt="image" id="grow" data-toggle="modal" data-target="#myModal{{item.id_item}}">
+				<div class="item hvr-float-shadow" data-toggle="modal" data-target="#modalPortfolio{{item.slug}}" >
+					<img src="{{ item.main_image.url }}" alt="image" id="grow" style="max-width:300px;">
 					<div class="overlay">
-						<div class="text">{{ item.name}}</div>
-					</div>
-				</div>
-			</div>
-			<div class="modal fade" id="myModal{{item.id_item}}" role="dialog" style="margin:auto">
-				<div class="modal-dialog modal-sm" id="modal-sm">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal">&times;</button>
-							<div id="fh5co-intro-section" class="section-overlay animate-box" data-animate-effect="fadeIn">
-								<div class="fh5co-intro-cover text-center" data-stellar-background-ratio="0.5" style=" background-image: url({% static 'images/slidecontatos.jpg' %});">
-									<div class="container">
-										<div class="row">
-											<div class="col-md-8 col-md-offset-2 float-overlay">
-												<h2>{{ item.name }}</h2>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="modal-body">
-							<div class="row">
-								<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-									<p>{{item.description|linebreaks}}</p>
-								</div>
-							</div>
-							<div id="fh5co-section">
-								<div class="container">
-									<div class="row">
-										<div class="col-md-10 col-md-offset-1">
-											<div class="col-md-4 animate-box">
-												<div class="fh5co-inner fh5co-services">
-													<img src="{{ item.main_image.url }}" style="width: 250px;
-							    margin: 2%;">
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>	
-							<div class="modal-footer">
-							    <button class="btn btn-default" data-dismiss="modal">Fechar</button>
-							</div>
-						</div>
+						<div class="text">{{ item.title}}</div>
 					</div>
 				</div>
 			</div>
@@ -263,6 +222,107 @@
 	</div>
 </div>
 
+<style type="text/css">
+	
+		
+	#modalPortfolio .modal-dialog{
+	        overflow-y: initial !important;
+	        height: 100%;
+	        width: 100%;
+	}
+	#modalPortfolio .modal-body{
+	        overflow-y: auto;
+	        overflow-x: auto;
+	}
+
+	#modalPortfolio .modal-body label{
+	    font-size: 15px;
+	    letter-spacing: 0.5px;
+	    text-transform: uppercase;
+	    position: relative;
+	}
+
+	#modalPortfolio .modal-body input{
+        border-radius:5px;
+        border-width: 1px;
+        margin-right: 5px;
+        padding-left: 5px;
+	}
+
+	#modalPortfolio .modal-footer button{
+        background-color: #4b63ab;
+        color: white;
+	}
+
+	.modal-dialog2 {
+	  width: 100%;
+	  height: 100%;
+	  margin: 0;
+	  padding: 0;
+	  background-color: #fff; 
+	}
+
+	.modal-content2 {
+	  height: auto;
+	  min-height: 100%;
+	  border-radius: 0;
+	  background-color: #fff; 
+	}
+
+</style>
+
+
+{% for item in port %}
+
+<div class="modal" id="modalPortfolio{{item.slug}}" role="dialog" style="margin:auto">
+	<div class="modal-dialog2 modal-sm" id="modal-sm">
+		<div class="modal-content2">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<div id="fh5co-intro-section" class="section-overlay">
+					<div class="fh5co-intro-cover text-center" data-stellar-background-ratio="0.5" style=" background-image: url({% static 'images/slidecontatos.jpg' %});">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-8 col-md-offset-2 float-overlay">
+									<h2>{{ item.title }}</h2>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-body2">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center heading-section">
+						<p>{{item.description|linebreaks}}</p>
+					</div>
+				</div>
+				<div id="fh5co-section" style="background-color:#fff">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-1">
+								{% for img in images %}
+								<div class="col-md-4">
+									<div class="fh5co-inner fh5co-services">
+										<img src="{{ img.image.url }}" style="max-width: 250px;
+									}
+				    margin: 2%;">
+									</div>
+								</div>
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+				</div>	
+				<div class="modal-footer">
+				    <button class="btn btn-default" data-dismiss="modal">Fechar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endfor %}
 
 
 
