@@ -1,14 +1,17 @@
 from django.conf.urls import url
-from home import views
+from . import views
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
 	url(r'^$', views.index, name='index'),
-	url(r'^portfolio$', views.portfolio, name='portfolio'),
 	url(r'^servicos$', views.service, name='service'),
 	url(r'^contato$', views.contact, name='contact'),
+	url(r'^portfolio$', views.galeria, name='galeria'),
+	url(r'^(?P<slug>[\w\-]+)/$', views.details, name='details'),
 ]
 
 if settings.DEBUG:
 	urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+

@@ -63,13 +63,17 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
-				{% for item in portfolio_images %}
-				<div class="col-md-4 animate-box">
-					<div class="fh5co-inner fh5co-services">
-						<img src="{% static 'images/trator.jpg' %}" style="width: 250px;
-    margin: 2%;">
-					</div>
-				</div>
+				{% for gallery in galleries %}
+					{% for item in port %}
+						{% if gallery.gallery_id == item.id_item %}
+							<div class="col-md-4 animate-box">
+								<div class="fh5co-inner fh5co-services">
+									<img src="{{ item.image.url }}" style="width: 250px;
+			    margin: 2%;">
+								</div>
+							</div>
+						{% endif %}
+					{% endfor %}
 				{% endfor %}
 			</div>
 		</div>
