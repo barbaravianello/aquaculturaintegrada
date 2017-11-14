@@ -47,11 +47,11 @@
 
 
 <div id="slideshow" class="owl-carousel owl-theme" data-animate-effect="fadeIn">
+	<div class="item"><img src="{% static 'images/Aeradores.jpg' %}" alt="image"></div>
 	<div class="item"><img src="{% static 'images/slide2.jpg' %}" alt="image"></div>
 	<div class="item"><img src="{% static 'images/trator.jpg' %}" alt="image"></div>
 	<div class="item"><img src="{% static 'images/slide3.jpg' %}" alt="image"></div>
 	<div class="item"><img src="{% static 'images/slide4.jpg' %}" alt="image"></div>
-	<div class="item"><img src="{% static 'images/slide5.jpg' %}" alt="image"></div>
 	<div class="item"><img src="{% static 'images/slide6.jpg' %}" alt="image"></div>
 </div>
 <!-- FIM DO SLIDESHOW -->
@@ -380,21 +380,26 @@
 				    	</div>
 					</nav>
 				</header>
-
-				<!-- FIM DO MENU -->
-				<div id="fh5co-intro-section" class="section-overlay" style="margin-bottom:0px">
-					<style type="text/css">
-						.#bg {
-							position: fixed; 
-						  	top: 0; 
-						  	left: 0; 
-							
-						  	/* Preserve aspet ratio */
-						  	min-width: 100%;
-						  	min-height: 100%;
-						}
-					</style>
-					<div id="bg" class="fh5co-intro-cover text-center" data-stellar-background-ratio="0.5" style=" background-image: url({% static 'images/slidecontatos.jpg' %});">
+			</div>
+			<style type="text/css">
+				.#bg {
+					position: fixed;
+				  	top: 0; 
+				  	left: 0; 
+					
+				  	/* Preserve aspet ratio */
+				  	min-width: 100%;
+				  	min-height: 100%;
+				}
+				.modal-body2 fh5co-intro-section {
+					max-height:20%;
+				}
+			</style>
+			<!-- FIM DO MENU -->
+			
+			<div class="modal-body2">
+				<div id="fh5co-intro-section" class="section-overlay animate-box" data-animate-effect="fadeIn">
+					<div class="fh5co-intro-cover text-center" data-stellar-background-ratio="0.5" style=" background-image: url({% static 'images/portfolio.png' %});">
 						<div class="container">
 							<div class="row">
 								<div class="col-md-8 col-md-offset-2 float-overlay">
@@ -404,8 +409,6 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="modal-body2">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center heading-section" style="padding-left: 30px; padding-right: 30px;">
 						<p>{{item.description|linebreaks}}</p>
@@ -416,13 +419,13 @@
 						<div class="row">
 							<div class="col-md-10 col-md-offset-1">
 								{% for img in images %}
-								<div class="col-md-4">
-									<div class="fh5co-inner fh5co-services">
-										<img src="{{ img.image.url }}" style="max-width: 250px;
-									}
-				    margin: 2%;">
-									</div>
-								</div>
+									{% if img.id_image == item.id_item%}
+										<div class="col-md-4">
+											<div class="fh5co-inner fh5co-services">
+												<img src="{{ img.image.url }}" style="max-width: 250px;margin: 2%;">
+											</div>
+										</div>
+									{% endif%}
 								{% endfor %}
 							</div>
 						</div>

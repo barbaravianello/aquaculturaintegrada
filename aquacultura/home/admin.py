@@ -20,8 +20,8 @@ class PortfolioImageInline(admin.TabularInline):
     extra = 0
 
 class PortfolioAdmin(admin.ModelAdmin):
-	list_display = ['title', 'slug']
-	search_fields = ['title', 'slug']
+	list_display = ['title', 'slug', 'id_item']
+	search_fields = ['title', 'slug', 'id_item']
 	prepopulated_fields = {'slug': ['title']}
 	inlines = [PortfolioImageInline,]
 

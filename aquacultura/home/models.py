@@ -43,6 +43,7 @@ class PortfolioManager(models.Manager):
 class Portfolio(models.Model):
     title = models.CharField('Nome', max_length=100)
     slug = models.SlugField('Atalho')
+    id_item = models.CharField(max_length=3)
     main_image = models.ImageField(upload_to='portifolio/images', verbose_name="Imagem Principal")
     description = models.TextField('Descrição ', blank = True)
     prepopulated_fields = {'slug': ['name']}
@@ -59,6 +60,7 @@ class Portfolio(models.Model):
 
 class PortfolioImage(models.Model):
     title = models.ForeignKey(Portfolio, related_name='gallery')
+    id_image = models.CharField(verbose_name="Identificador do item (1, 2, 3,...)", max_length=3)
     image = models.ImageField(upload_to='portfolio/images', verbose_name="Imagem")
 
 
