@@ -248,7 +248,28 @@
 
 			/*------------------- FIM DE FUNÇÕES PREV/NEXT PARA NAVEGAÇÃO  ---------------------*/
 			
-
+			(function($) {
+			    var loadImages = new Promise(function(done) {
+			        var loading = $("img").length;
+			        $("img").each(function() {
+			            $("<img/>")
+			                .on('load', function() {
+			                    loading--;
+			                    if (!loading) done();
+			                })
+			                .on('error', function() {
+			                    loading--;
+			                    if (!loading) done();
+			                })
+			                .attr("src", $(this).attr("src"))
+			        });
+			    });
+			    loadImages.then(function() {
+			        $(document).trigger({
+			            type: "imagesLoaded"
+			        });
+			    });
+			})(jQuery);
 
 		</script>
 	</body>
