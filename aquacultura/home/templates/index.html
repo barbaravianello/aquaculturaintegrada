@@ -4,6 +4,160 @@
 
 {% block content %}
 
+<style type="text/css">
+	
+		
+	#modalPortfolio .modal-dialog{
+	        overflow-y: initial !important;
+	        height: 100%;
+	        width: 100%;
+	}
+	#modalPortfolio .modal-body{
+	        overflow-y: auto;
+	        overflow-x: auto;
+	}
+
+	#modalPortfolio .modal-body label{
+	    font-size: 15px;
+	    letter-spacing: 0.5px;
+	    text-transform: uppercase;
+	    position: relative;
+	}
+
+	#modalPortfolio .modal-body input{
+        border-radius:5px;
+        border-width: 1px;
+        margin-right: 5px;
+        padding-left: 5px;
+	}
+
+	#modalPortfolio .modal-footer button{
+        background-color: #4b63ab;
+        color: white;
+	}
+
+	.modal-dialog2 {
+	  width: 100%;
+	  height: 100%;
+	  margin: 0;
+	  padding: 0;
+	  background-color: #fff; 
+	}
+
+	.modal-content2 {
+	  height: auto;
+	  min-height: 100%;
+	  border-radius: 0;
+	  background-color: #fff; 
+	}
+
+	@media screen and (max-width: 480px){
+	  #portifolio {
+	    width:80%;
+	    margin-left:12%;
+	    padding: 10px;
+	  }
+	  .owl-carousel-arrows {
+	    margin-top: 30%;
+	    vertical-align: middle;
+	    position: absolute;
+	  }
+
+	  #right{
+	    margin-top: 30%;
+	    vertical-align: middle;
+	    position: absolute;
+	    margin-left:83%;
+	  }
+	}
+	@media screen and (min-width: 500px) and (max-width: 3000px){
+	  #portifolio {
+	    width:80%;
+	    margin-left:10%;
+	    padding: 10px;
+	  }
+	  .owl-carousel-arrows {
+	    margin-top: 10%;
+	    vertical-align: middle;
+	    position: absolute;
+	    margin-left: 5%;
+	  }
+
+	  #right{
+	    margin-top: 10%;
+	    vertical-align: middle;
+	    position: absolute;
+	    margin-left:87%;
+	  }
+	}
+
+</style>
+
+
+<style type="text/css">
+		
+		/* Float Shadow */
+	.hvr-float-shadow {
+	  display: inline-block;
+	  vertical-align: middle;
+	  -webkit-transform: perspective(1px) translateZ(0);
+	  transform: perspective(1px) translateZ(0);
+	  box-shadow: 0 0 1px transparent;
+	  position: relative;
+	  -webkit-transition-duration: 0.3s;
+	  transition-duration: 0.3s;
+	  -webkit-transition-property: transform;
+	  transition-property: transform;
+	}
+	.hvr-float-shadow:before {
+	  pointer-events: none;
+	  position: absolute;
+	  z-index: -1;
+	  content: '';
+	  top: 100%;
+	  left: 5%;
+	  height: 10px;
+	  width: 90%;
+	  opacity: 0;
+	  background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, transparent 80%);
+	  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, transparent 80%);
+	  /* W3C */
+	  -webkit-transition-duration: 0.3s;
+	  transition-duration: 0.3s;
+	  -webkit-transition-property: transform, opacity;
+	  transition-property: transform, opacity;
+	}
+	.hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
+	  -webkit-transform: translateY(-5px);
+	  transform: translateY(-30px);
+	  /* move the element up by 5px */
+	}
+	.hvr-float-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
+	  opacity: 1;
+	  -webkit-transform: translateY(5px);
+	  transform: translateY(20px);
+	  /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+	}
+
+	.overlay {
+	  position: absolute;
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  height: 100%;
+	  width: 100%;
+	  opacity: 0;
+	  transition: .5s ease;
+	  background-color: rgba(38, 45, 66, 0.66);
+	}
+
+	.btn-default {
+		background-color: #4b63ab;
+    	color: white;
+	}
+</style>
+
 <!-- MENU -->
 <header role="banner" id="fh5co-header">
 	<nav class="navbar navbar-default" id="mainnav">
@@ -47,12 +201,12 @@
 
 
 <div id="slideshow" class="owl-carousel owl-theme" data-animate-effect="fadeIn">
-	<div class="item"><img src="{% static 'images/Aeradores.jpg' %}" alt="image"></div>
-	<div class="item"><img src="{% static 'images/slide2.jpg' %}" alt="image"></div>
-	<div class="item"><img src="{% static 'images/trator.jpg' %}" alt="image"></div>
-	<div class="item"><img src="{% static 'images/slide3.jpg' %}" alt="image"></div>
-	<div class="item"><img src="{% static 'images/slide4.jpg' %}" alt="image"></div>
-	<div class="item"><img src="{% static 'images/slide6.jpg' %}" alt="image"></div>
+	<div class="item"><img src="{% static 'images/Aeradores.jpg' %}" alt="image" style="height:636px;"></div>
+	<div class="item"><img src="{% static 'images/slide2.jpg' %}" alt="image" style="height: 636px;"></div>
+	<div class="item"><img src="{% static 'images/trator.jpg' %}" alt="image" style="height: 636px;"></div>
+	<div class="item"><img src="{% static 'images/slide3.jpg' %}" alt="image" style="height: 636px;"></div>
+	<div class="item"><img src="{% static 'images/slide4.jpg' %}" alt="image" style="height: 636px;"></div>
+	<div class="item"><img src="{% static 'images/slide6.jpg' %}" alt="image" style="height: 636px;"></div>
 </div>
 <!-- FIM DO SLIDESHOW -->
 
@@ -108,7 +262,7 @@
 			<div class="content">
 				<div class="item hvr-float-shadow" >
 					<a href="{% static 'images/raceway.jpg' %}" class="image-popup">
-					<img src="{% static 'images/raceway.jpg' %}" alt="image" style="max-width: 339px;">
+					<img src="{% static 'images/raceway.jpg' %}" alt="image" style="max-width: 339px; height:291px;">
 					<div class="overlay">
 						<div class="text">Raceway</div>
 					</div>
@@ -118,7 +272,7 @@
 			<div class="content">
 				<div class="item hvr-float-shadow">
 					<a href="{% static 'images/viveiros.jpg' %}" class="image-popup">
-					<img src="{% static 'images/viveiros.jpg' %}" alt="image" style="max-width: 339px;">
+					<img src="{% static 'images/viveiros.jpg' %}" alt="image" style="max-width: 339px; height:291px;">
 					<div class="overlay">
 						<div class="text">Viveiros</div>
 					</div>
@@ -128,7 +282,7 @@
 			<div class="content">
 				<div class="item hvr-float-shadow">
 					<a href="{% static 'images/bacias.jpg' %}" class="image-popup">
-					<img src="{% static 'images/bacias.jpg' %}" alt="image" style="max-width: 339px;">
+					<img src="{% static 'images/bacias.jpg' %}" alt="image" style="max-width: 339px; height:291px;">
 					<div class="overlay">
 						<div class="text">Bacias</div>
 					</div>
@@ -233,7 +387,7 @@
 			{% for item in port %}
 			<div class="content">
 				<div class="item hvr-float-shadow" data-toggle="modal" data-target="#modalPortfolio{{item.slug}}" >
-					<img src="{{ item.main_image.url }}" alt="image" id="grow" style="max-width: 300px;">
+					<img src="{{ item.main_image.url }}" alt="image" id="grow" style="max-width: 287px;height:240px;">
 					<div class="overlay">
 						<div class="text">{{ item.title}}</div>
 					</div>
@@ -244,98 +398,9 @@
 	</div>
 	<div class="col-sm-12 text-center">
 		<br>
-		<a href="{% url 'blog:home' %}"><button class="btn btn-default">Confira nossas últimas notícias!</button></a>
+		<a href="{% url 'blog:home' %}"><button class="btn btn-default">Confira as últimas notícias!</button></a>
 	</div>
 </div>
-
-<style type="text/css">
-	
-		
-	#modalPortfolio .modal-dialog{
-	        overflow-y: initial !important;
-	        height: 100%;
-	        width: 100%;
-	}
-	#modalPortfolio .modal-body{
-	        overflow-y: auto;
-	        overflow-x: auto;
-	}
-
-	#modalPortfolio .modal-body label{
-	    font-size: 15px;
-	    letter-spacing: 0.5px;
-	    text-transform: uppercase;
-	    position: relative;
-	}
-
-	#modalPortfolio .modal-body input{
-        border-radius:5px;
-        border-width: 1px;
-        margin-right: 5px;
-        padding-left: 5px;
-	}
-
-	#modalPortfolio .modal-footer button{
-        background-color: #4b63ab;
-        color: white;
-	}
-
-	.modal-dialog2 {
-	  width: 100%;
-	  height: 100%;
-	  margin: 0;
-	  padding: 0;
-	  background-color: #fff; 
-	}
-
-	.modal-content2 {
-	  height: auto;
-	  min-height: 100%;
-	  border-radius: 0;
-	  background-color: #fff; 
-	}
-
-	@media screen and (max-width: 480px){
-	  #portifolio {
-	    width:80%;
-	    margin-left:12%;
-	    padding: 10px;
-	  }
-	  .owl-carousel-arrows {
-	    margin-top: 30%;
-	    vertical-align: middle;
-	    position: absolute;
-	  }
-
-	  #right{
-	    margin-top: 30%;
-	    vertical-align: middle;
-	    position: absolute;
-	    margin-left:83%;
-	  }
-	}
-	@media screen and (min-width: 500px) and (max-width: 3000px){
-	  #portifolio {
-	    width:80%;
-	    margin-left:10%;
-	    padding: 10px;
-	  }
-	  .owl-carousel-arrows {
-	    margin-top: 10%;
-	    vertical-align: middle;
-	    position: absolute;
-	    margin-left: 5%;
-	  }
-
-	  #right{
-	    margin-top: 10%;
-	    vertical-align: middle;
-	    position: absolute;
-	    margin-left:87%;
-	  }
-	}
-
-</style>
 
 
 {% for item in port %}
@@ -441,71 +506,6 @@
 
 {% endfor %}
 
-
-
-<style type="text/css">
-		
-		/* Float Shadow */
-	.hvr-float-shadow {
-	  display: inline-block;
-	  vertical-align: middle;
-	  -webkit-transform: perspective(1px) translateZ(0);
-	  transform: perspective(1px) translateZ(0);
-	  box-shadow: 0 0 1px transparent;
-	  position: relative;
-	  -webkit-transition-duration: 0.3s;
-	  transition-duration: 0.3s;
-	  -webkit-transition-property: transform;
-	  transition-property: transform;
-	}
-	.hvr-float-shadow:before {
-	  pointer-events: none;
-	  position: absolute;
-	  z-index: -1;
-	  content: '';
-	  top: 100%;
-	  left: 5%;
-	  height: 10px;
-	  width: 90%;
-	  opacity: 0;
-	  background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, transparent 80%);
-	  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, transparent 80%);
-	  /* W3C */
-	  -webkit-transition-duration: 0.3s;
-	  transition-duration: 0.3s;
-	  -webkit-transition-property: transform, opacity;
-	  transition-property: transform, opacity;
-	}
-	.hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
-	  -webkit-transform: translateY(-5px);
-	  transform: translateY(-30px);
-	  /* move the element up by 5px */
-	}
-	.hvr-float-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
-	  opacity: 1;
-	  -webkit-transform: translateY(5px);
-	  transform: translateY(20px);
-	  /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
-	}
-
-	.overlay {
-	  position: absolute;
-	  top: 0;
-	  bottom: 0;
-	  left: 0;
-	  right: 0;
-	  height: 100%;
-	  width: 100%;
-	  opacity: 0;
-	  transition: .5s ease;
-	  background-color: rgba(38, 45, 66, 0.66);
-	}
-
-	.btn-default {
-		background-color: #4b63ab;
-    	color: white;
-	}
-</style>
 
 
 <!-- MODAL DE INSCRIÇÃO -->
