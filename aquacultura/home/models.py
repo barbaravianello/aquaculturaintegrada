@@ -3,6 +3,19 @@ from fontawesome.fields import IconField
 from django.db.models import Q
 
 
+class Slideshow(models.Model):
+    name = models.CharField('Nome', max_length=100)
+    image = models.ImageField(upload_to='slideshow/images', verbose_name="Imagem", null=True, blank=True)
+    
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Slideshow'
+        verbose_name_plural = 'Slideshow'
+        ordering = ['name']
+
+
 class Team(models.Model):
     name = models.CharField('Nome', max_length=100)
     slug = models.SlugField('Atalho')

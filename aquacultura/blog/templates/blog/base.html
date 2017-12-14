@@ -55,13 +55,13 @@
     <div class="container" style="margin-top:10px;">
       <div class="row">
         <div class="col-xs-12 visible-xs animated fadeIn">
-          <form method="get" action="http://www.google.com/search" id="search">
+          <!--<form method="get" action="http://www.google.com/search" id="search">
             <input type="hidden" name="sitesearch" value="http://blog.ejectufrn.com.br/"></input>
             <input type="text" placeholder="Pesquisar no site" name="q"></input>
             <button type="submit" id="btnsearch">
               <img src="{% static 'blog/img/search.svg' %}">
             </button>
-          </form>
+          </form>-->
           <div class="categorias animated fadeIn">
             <button id="btncategoriasup">
               Categorias
@@ -89,13 +89,12 @@
             {% endblock %}
         </div>
         <div class="col-sm-3 hidden-xs animated fadeIn" style="padding-top:5px; margin: 0">
-          <form method="get" action="http://www.google.com/search" id="search">
-            <input type="hidden" name="sitesearch" value="http://blog.ejectufrn.com.br"></input>
-            <input type="text" placeholder="Pesquisar no site" name="q"></input>
-            <button type="submit" id="btnsearch">
-              <img src="{% static 'blog/img/search.svg' %}">
-            </button>
-          </form>
+          <!--<form method="get" action="{% url 'home:index' %}" method="get" accept-charset="utf-8">
+			<input type="text" placeholder="Pesquisar no site" name="q"></input>
+			<button type="submit" id="btnsearch" style="margin-top: -35px">
+			  <img src="{% static 'blog/img/search.svg' %}">
+			</button>
+		  </form>-->
             <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Faquaintegrada%2F&tabs=timeline&width=245&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" style="border:none;overflow:hidden" scrolling="yes" frameborder="0" allowTransparency="true"></iframe>
 
           <div class="cadastroemail">

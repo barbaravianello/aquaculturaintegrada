@@ -1,17 +1,19 @@
 from django.shortcuts import render, get_object_or_404
 from .forms import LeadForm
 from django.contrib import messages
-from home.models import Team, Service, Portfolio, PortfolioImage
+from home.models import Slideshow, Team, Service, Portfolio, PortfolioImage
 from home.forms import ContactAquacultura
 
 def index(request):
 	teams = Team.objects.all()
 	port = Portfolio.objects.all()
 	images = PortfolioImage.objects.all()
+	slideshow = Slideshow.objects.all()
 	context = {
 		'teams': teams,
 		'port': port,
 		'images': images,
+        'slideshow': slideshow,
 	}
 	if request.method == 'POST':
 		form = LeadForm(request.POST)

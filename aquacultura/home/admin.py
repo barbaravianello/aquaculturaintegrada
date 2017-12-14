@@ -1,6 +1,9 @@
 from django.contrib import admin
-from .models import Team, Service, Portfolio, PortfolioImage
+from .models import Slideshow, Team, Service, Portfolio, PortfolioImage
 
+
+class SlideshowAdmin(admin.ModelAdmin):
+    list_display = ['name']
 
 class TeamAdmin(admin.ModelAdmin):
 
@@ -25,6 +28,7 @@ class PortfolioAdmin(admin.ModelAdmin):
 	prepopulated_fields = {'slug': ['title']}
 	inlines = [PortfolioImageInline,]
 
+admin.site.register(Slideshow, SlideshowAdmin)
 admin.site.register(Team, TeamAdmin)
 admin.site.register(Service, ServiceAdmin)
 admin.site.register(Portfolio, PortfolioAdmin)

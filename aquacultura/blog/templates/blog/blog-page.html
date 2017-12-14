@@ -11,12 +11,13 @@
   <title>Aquacultura Integrada | Blog</title>
 
   <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
-  <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
-  <meta name="author" content="FREEHTML5.CO" />
-
+  <meta name="description" content="Acesse nosso blog e tenha disponível conteúdos que irão ajudar sua empresa a crescer">
+  <meta name="keywords" content="blog,aquacultura,site,empresa">
+  <meta name="og:description" content="Acesse nosso blog e tenha disponível conteúdos que irão ajudar sua empresa a crescer">
+  <meta name="og:keywords" content="blog,aquacultura,site,empresa">
+  <meta property="og:title" content="Aquacultura Integrada | Blog">
+  <meta property="og:image" content="{% static 'images/logo.png' %}">
+  <meta property="og:url" content="http://www.aquaculturaintegrada.com.br/blog">
 
     <!-- Facebook and Twitter integration -->
   <meta property="og:title" content=""/>
@@ -100,24 +101,15 @@
         <div class="container" style="margin-top:10px;">
           <div class="row">
             <div class="col-sm-12 visible-xs animated fadeIn">
-              <form method="get" action="{% url 'blog:search' %}" method="get" accept-charset="utf-8">
+              <!--<form method="get" action="{% url 'blog:search' %}" method="get" accept-charset="utf-8">
                 <input type="text" placeholder="Pesquisar no site" name="q"></input>
                 <button type="submit" id="btnsearch" style="margin-top: -35px">
                   <img src="{% static 'blog/img/search.svg' %}">
                 </button>
-              </form>
+              </form>-->
             </div>
 
             <div class="col-md-9">
-
-              <title>Blog - EJECT</title>
-              <meta name="description" content="Acesse nosso blog e tenha disponível conteúdos que irão ajudar sua empresa a crescer">
-              <meta name="keywords" content="blog,eject,site,software,empresa,júnior,da,escola,de,ciencias,e,tecnologia,ect,cet">
-              <meta name="og:description" content="Acesse nosso blog e tenha disponível conteúdos que irão ajudar sua empresa a crescer">
-              <meta name="og:keywords" content="eject,blog,eject,site,software,empresa,júnior,ciencias,tecnologia,ect,cet">
-              <meta property="og:title" content="Blog - EJECT">
-              <meta property="og:image" content="{% static 'blog/img/iconeject.png' %}">
-              <meta property="og:url" content="http://www.ejectufrn.com.br/blog">
 
               <div class="col-sm-12">
                 <article class="animated fadeIn">

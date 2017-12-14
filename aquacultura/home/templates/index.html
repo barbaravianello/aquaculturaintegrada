@@ -47,12 +47,9 @@
 
 
 <div id="slideshow" class="owl-carousel owl-theme" data-animate-effect="fadeIn">
-	<div class="item"><img src="{% static 'images/Aeradores.jpg' %}" alt="image"></div>
-	<div class="item"><img src="{% static 'images/slide2.jpg' %}" alt="image"></div>
-	<div class="item"><img src="{% static 'images/trator.jpg' %}" alt="image"></div>
-	<div class="item"><img src="{% static 'images/slide3.jpg' %}" alt="image"></div>
-	<div class="item"><img src="{% static 'images/slide4.jpg' %}" alt="image"></div>
-	<div class="item"><img src="{% static 'images/slide6.jpg' %}" alt="image"></div>
+    {% for item in slideshow %}
+	    <div class="item"><img src="{{ item.image.url }}" alt="image"></div>
+    {% endfor %}
 </div>
 <!-- FIM DO SLIDESHOW -->
 
@@ -108,7 +105,7 @@
 			<div class="content">
 				<div class="item hvr-float-shadow" >
 					<a href="{% static 'images/raceway.jpg' %}" class="image-popup">
-					<img src="{% static 'images/raceway.jpg' %}" alt="image" style="max-width: 339px;">
+					<img src="{% static 'images/raceway.jpg' %}" alt="image">
 					<div class="overlay">
 						<div class="text">Raceway</div>
 					</div>
@@ -118,7 +115,7 @@
 			<div class="content">
 				<div class="item hvr-float-shadow">
 					<a href="{% static 'images/viveiros.jpg' %}" class="image-popup">
-					<img src="{% static 'images/viveiros.jpg' %}" alt="image" style="max-width: 339px;">
+					<img src="{% static 'images/viveiros.jpg' %}" alt="image">
 					<div class="overlay">
 						<div class="text">Viveiros</div>
 					</div>
@@ -128,7 +125,7 @@
 			<div class="content">
 				<div class="item hvr-float-shadow">
 					<a href="{% static 'images/bacias.jpg' %}" class="image-popup">
-					<img src="{% static 'images/bacias.jpg' %}" alt="image" style="max-width: 339px;">
+					<img src="{% static 'images/bacias.jpg' %}" alt="image">
 					<div class="overlay">
 						<div class="text">Bacias</div>
 					</div>
