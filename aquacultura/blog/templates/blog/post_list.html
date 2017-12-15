@@ -1,5 +1,6 @@
 {% extends 'blog/base.html' %}
 {% load staticfiles %}
+
 {% block header %}
   <title>Aquacultura Integrada | Blog</title>
   <meta name="description" content="Acesse nosso blog e tenha disponível conteúdos que irão ajudar sua empresa a crescer">
@@ -10,30 +11,31 @@
   <meta property="og:image" content="{% static 'images/logo.png' %}">
   <meta property="og:url" content="http://www.aquaculturaintegrada.com.br/blog">
 {% endblock %}
+
 {% block content %}
-<ul class="col-xs-12 animated fadeIn" id="postagens">
-{% if categoriaescolhida %}
-<div class="categoriaescolhida animated fadeIn">
-<h3>Categoria: {{categoriaescolhida.nome}}</h3>
-</div>
-{% endif %}
-{% for post in posts %}
-    <li class="col-xs-12 col-sm-6 animated fadeIn">
-      <a href="{{  post.get_absolute_url }}" class="linkpost">
-        <div class="post" style="background-image: url({{post.capa.url}});">
-          <div class="titulo">
-              <h2>
-                {{post.title}}
-              </h2>
+  <ul class="col-xs-12 animated fadeIn" id="postagens">
+  {% if categoriaescolhida %}
+  <div class="categoriaescolhida animated fadeIn">
+  <h3>Categoria: {{categoriaescolhida.nome}}</h3>
+  </div>
+  {% endif %}
+  {% for post in posts %}
+      <li class="col-xs-12 col-sm-6 animated fadeIn">
+        <a href="{{  post.get_absolute_url }}" class="linkpost">
+          <div class="post" style="background-image: url({{post.capa.url}});">
+            <div class="titulo">
+                <h2>
+                  {{post.title}}
+                </h2>
+            </div>
+            <div class="subtitulo">
+                <h5>
+                  {{post.subtitle|truncatechars:75}}
+                </h5>
+            </div>
           </div>
-          <div class="subtitulo">
-              <h5>
-                {{post.subtitle|truncatechars:75}}
-              </h5>
-          </div>
-        </div>
-      </a>
-    </li>
-{% endfor %}
-</ul>
+        </a>
+      </li>
+  {% endfor %}
+  </ul>
 {% endblock content %}

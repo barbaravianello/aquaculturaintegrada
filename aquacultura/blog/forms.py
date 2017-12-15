@@ -6,8 +6,8 @@ from django.conf import settings
 
 # Cria o formulario para recolher o e-mail do usuario
 class LeadForm(forms.Form):
-   name = forms.CharField(max_length = 100, widget=forms.TextInput(attrs={'placeholder': 'Seu nome'}))
-   email = forms.EmailField(widget=forms.TextInput(attrs={'placeholder': 'seu.email.aqui@porfavor.com'}))
+   name = forms.CharField(max_length = 100, widget=forms.TextInput(attrs={'placeholder': 'Seu nome', 'style' : 'font-size: 16px'}))
+   email = forms.EmailField(widget=forms.TextInput(attrs={'placeholder': 'email@aqui.com', 'style' : 'font-size: 16px'}))
    email.clean('email@example.com')
 
    def save_contact(self):
